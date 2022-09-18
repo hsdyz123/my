@@ -3,6 +3,7 @@
 ### 自己的一些无聊网站
 
 - [检测工作使用](https://hsdyz123.github.io/my/work/index.html)
+- [职业卫生评价与检测复习](https://hsdyz123.github.io/my/%E8%81%8C%E4%B8%9A%E5%8D%AB%E7%94%9F%E8%AF%84%E4%BB%B7%E4%B8%8E%E6%A3%80%E6%B5%8B.html)
 - [答案之书（自制）](https://hsdyz123.github.io/my/%E7%AD%94%E6%A1%88%E4%B9%8B%E4%B9%A6.html)
 
 ### 别人的有趣网站
