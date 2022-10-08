@@ -1023,10 +1023,7 @@
         '妙',
         '梦',
       ]
-
-      // var name = x1[] + m1[2] + m1[3]
       for (let i = 0; i < 50; i++) {
-        // console.log(i + 1)
         function fnan() {
           var a = x1[Math.floor(Math.random() * x1.length)]
           var b = nan[Math.floor(Math.random() * nan.length)]
@@ -1049,6 +1046,10 @@
           fnv()
         })
       }
+      // 标题返回主页
+      $('h1').on('click', function () {
+        window.location.href = './index.html'
+      })
     </script>
   </body>
 </html>
