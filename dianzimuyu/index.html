@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #fff;
+      }
+      #app {
+        text-align: center;
+      }
+      #btn {
+        position: relative;
+        border: 0;
+        outline: 0;
+        background-color: #000;
+        margin-top: 200px;
+      }
+      #btn:hover {
+        cursor: pointer;
+      }
+      #btn:active {
+        transform: scale(92%);
+      }
+      .box {
+        position: absolute;
+        top: 180px;
+        left: 60%;
+      }
+    </style>
+    <link rel="shortcut icon" href="../fluidicon.png" />
+    <script src="../jquery.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="box" style="display: none">功德 +999999999</div>
+      <img src="./电子木鱼图片.jpg" id="btn" />
+    </div>
+
+    <script type="text/javascript">
+      $('#btn').on('click', function () {
+        $('.box')
+          .stop()
+          .css({ top: '180px', display: 'block', opacity: 1 })
+          .animate({ top: '150px', display: 'none', opacity: 0 }, 500)
+      })
+    </script>
+  </body>
+</html>
