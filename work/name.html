@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      /* * {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-decoration: none;
-      } */
       h1 {
         text-align: center;
+      }
+      h1:hover {
+        cursor: pointer;
       }
       .name {
         width: 245px;
@@ -31,8 +28,8 @@
         padding: 0 8px;
       }
     </style>
-    <link rel="shortcut icon" href="https://github.com/fluidicon.png" />
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <link rel="shortcut icon" href="./fluidicon.png" />
+    <script src="./jquery.js"></script>
   </head>
   <body>
     <div id="app">
@@ -1028,14 +1025,14 @@
           var a = x1[Math.floor(Math.random() * x1.length)]
           var b = nan[Math.floor(Math.random() * nan.length)]
           var c = nan[Math.floor(Math.random() * nan.length)]
-          console.log(a + b + c)
+          // console.log(a + b + c)
           $('#p' + i).html(a + b + c)
         }
         function fnv() {
           var x = x1[Math.floor(Math.random() * x1.length)]
           var y = nv[Math.floor(Math.random() * nv.length)]
           var z = nv[Math.floor(Math.random() * nv.length)]
-          console.log(x + y + z)
+          // console.log(x + y + z)
           $('#p' + i).html(x + y + z)
         }
         fnan()
