@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta song="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歌曲测试</title>
+    <link rel="shortcut icon" href="../fluidicon.png" />
+    <script src="../jquery.js"></script>
+    <!-- 引入 -->
+    <script src="./items.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>歌曲名称测试</h1>
+      <h3>作者名字</h3>
+      <audio src="" autoplay controls></audio><br />
+      <button id="random">随机歌曲</button><br /><br />
+      <button id="close">定时关闭</button><br />
+      <div id="guanbianniu" hidden>
+        <button id="close_0">自定义关闭</button><br /><br />
+        <button id="close_5">5min关闭</button><br /><br />
+        <button id="close_10">10min关闭</button><br /><br />
+        <button id="close_15">15min关闭</button><br /><br />
+        <button id="close_20">20min关闭</button><br /><br />
+        <button id="close_30">30min关闭</button><br /><br />
+        <button id="close_60">60min关闭</button>
+      </div>
+      <br />
+      <span id="time1">00</span>
+      :
+      <span id="time2">00</span>
+      <hr />
+      <ol>
+        <li><a href="javascript:;" id="song1">耍把戏</a></li>
+        <li><a href="javascript:;" id="song2">9420</a></li>
+        <li><a href="javascript:;" id="song3">平凡之路</a></li>
+        <li><a href="javascript:;" id="song4">起风了</a></li>
+        <li><a href="javascript:;" id="song5">往后余生</a></li>
+        <li><a href="javascript:;" id="song6">陷阱</a></li>
+      </ol>
+      <hr />
+      <!-- <button id="b123">123</button> -->
+    </div>
+
+    <script type="text/javascript">
+      $('#b123').on('click', function () {
+        $.get('https://api.66mz8.com/api/rand.music.163.php', function (res) {
+          console.log(res)
+        })
+      })
+
+      function song() {
+        let i = Math.floor(Math.random() * items.length)
+        $('h1').html(items[i].name)
+        $('h3').html(items[i].author)
+        $('audio').attr('src', items[i].url)
+      }
+      // 打开自动播放
+      song()
+      // 点击按钮随机换歌，自动播放
+      $('#random').on('click', function () {
+        song()
+      })
+      // 歌曲结束自动换歌，自动播放
+      $('audio').on('ended', function () {
+        song()
+      })
+
+      // 定时关闭按钮
+      $('#close').on('click', function () {
+        $('#guanbianniu').show()
+        $(this).hide()
+      })
+      for (let i = 0; i <= 50; i++) {
+        $('#guanbianniu button:nth-child(' + i + ')').on('click', function () {
+          $('#guanbianniu').hide()
+          $('#close').show()
+        })
+      }
+      // 自定义关闭
+      $('#close_0').on('click', function () {
+        for (let i = 0; i < 100; i++) {
+          clearInterval(i)
+        }
+        var ipta = prompt()
+        var mm = ipta - 0
+        var ss = 0
+        $('#time1').html(mm > 9 ? mm : '0' + mm)
+        $('#time2').html(ss > 9 ? ss : '0' + ss)
+        console.log(mm, ss)
+        setInterval(() => {
+          ss--
+          $('#time1').html(mm > 9 ? mm : '0' + mm)
+          $('#time2').html(ss > 9 ? ss : '0' + ss)
+          console.log(mm, ss)
+          if (ss === -1) {
+            mm -= 1
+            ss = 60
+            ss--
+            $('#time1').html(mm > 9 ? mm : '0' + mm)
+            $('#time2').html(ss > 9 ? ss : '0' + ss)
+            console.log(mm, ss)
+          }
+          if (mm === -1) {
+            window.close()
+          }
+        }, 1000)
+      })
+
+      // 点击进入歌曲
+      for (let i = 1; i <= items.length; i++) {
+        $('#song' + i).on('click', function () {
+          console.log('song' + i)
+          $('h1').html(items[i - 1].name)
+          $('h3').html(items[i - 1].author)
+          $('audio').attr('src', items[i - 1].url)
+        })
+      }
+    </script>
+    <script src="./close.js"></script>
+  </body>
+</html>
