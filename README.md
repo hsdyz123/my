@@ -2,6 +2,7 @@
 
 ### 自己的一些无聊网站
 
+- [主页](https://hsdyz123.github.io/my/)
 - [检测工作使用](https://hsdyz123.github.io/my/work/)
 - [答案之书（自制）](https://hsdyz123.github.io/my/daanzhishu/)
 - [电子木鱼（自制）](https://hsdyz123.github.io/my/dianzimuyu/)
