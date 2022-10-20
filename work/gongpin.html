@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      h1:hover {
+        cursor: pointer;
+      }
+      button {
+        width: 160px;
+        height: 40px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      table {
+        margin: 0 auto;
+      }
+      input {
+        width: 60px;
+        text-align: center;
+      }
+    </style>
+    <script src="./jquery.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>工频电场的随机数值</h1>
+      <h4>注：工频的随机数值全部在0.010~0.020之间</h4>
+      <button id="btn">刷新</button>
+      <br />
+      <br />
+      <table align="" border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>序号</th>
+          <th>工频1</th>
+          <th>工频2</th>
+          <th>工频3</th>
+          <th>平均工频</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td id="gp11"></td>
+          <td id="gp12"></td>
+          <td id="gp13"></td>
+          <td id="gp14"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td id="gp21"></td>
+          <td id="gp22"></td>
+          <td id="gp23"></td>
+          <td id="gp24"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td id="gp31"></td>
+          <td id="gp32"></td>
+          <td id="gp33"></td>
+          <td id="gp34"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td id="gp41"></td>
+          <td id="gp42"></td>
+          <td id="gp43"></td>
+          <td id="gp44"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td id="gp51"></td>
+          <td id="gp52"></td>
+          <td id="gp53"></td>
+          <td id="gp54"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td id="gp61"></td>
+          <td id="gp62"></td>
+          <td id="gp63"></td>
+          <td id="gp64"></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td id="gp71"></td>
+          <td id="gp72"></td>
+          <td id="gp73"></td>
+          <td id="gp74"></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td id="gp81"></td>
+          <td id="gp82"></td>
+          <td id="gp83"></td>
+          <td id="gp84"></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td id="gp91"></td>
+          <td id="gp92"></td>
+          <td id="gp93"></td>
+          <td id="gp94"></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td id="gp101"></td>
+          <td id="gp102"></td>
+          <td id="gp103"></td>
+          <td id="gp104"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      // 工频
+      function gp() {
+        for (let i = 1; i <= 10; i++) {
+          for (let j = 1; j <= 3; j++) {
+            $('#gp' + i + j).text((Math.random() / 100 + 0.01).toFixed(3))
+            $('#gp' + i + '4').text(
+              (
+                (parseFloat($('#gp' + i + '1').text()) +
+                  parseFloat($('#gp' + i + '2').text()) +
+                  parseFloat($('#gp' + i + '3').text())) /
+                3
+              ).toFixed(3)
+            )
+          }
+        }
+      }
+      // 调用
+      gp()
+      // 刷新调用
+      $('#btn').on('click', function () {
+        gp()
+      })
+
+      // 标题返回主页
+      $('h1').on('click', function () {
+        window.location.href = './index.html'
+      })
+    </script>
+  </body>
+</html>
