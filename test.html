@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="./fluidicon.png" />
+    <script src="./device.js"></script>
+    <script src="./jquery.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Document</h1>
+      <input type="text" id="ipt" value="123" /><br /><br />
+      <button id="btn1">显示</button>
+      <button id="btn2">添加</button>
+      <button id="btn3">删除</button>
+    </div>
+
+    <script type="text/javascript">
+      const Storage = {}
+
+      Storage.get = function (name) {
+        return sessionStorage.getItem(name)
+      }
+
+      Storage.set = function (name, val) {
+        sessionStorage.setItem(name, $('#ipt').val())
+      }
+
+      Storage.del = function (name) {
+        sessionStorage.removeItem(name)
+      }
+
+      $('#btn1').on('click', function () {
+        $('h1').html(Storage.get('value'))
+      })
+      $('#btn2').on('click', function () {
+        Storage.set('value', $('#ipt').val())
+      })
+      $('#btn3').on('click', function () {
+        Storage.del('value')
+      })
+
+      // Storage.set('status', 'OK')
+      // Storage.set('quit', '...')
+
+      //Storage.del("status");
+    </script>
+  </body>
+</html>
