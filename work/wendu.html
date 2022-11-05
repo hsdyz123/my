@@ -95,6 +95,30 @@
             <td>18:00</td>
             <td id="x9"></td>
           </tr>
+          <tr>
+            <td>12:30</td>
+            <td id="s10"></td>
+            <td>18:30</td>
+            <td id="x10"></td>
+          </tr>
+          <tr>
+            <td>13:00</td>
+            <td id="s11"></td>
+            <td>19:00</td>
+            <td id="x11"></td>
+          </tr>
+          <tr>
+            <td>13:30</td>
+            <td id="s12"></td>
+            <td>19:30</td>
+            <td id="x12"></td>
+          </tr>
+          <tr>
+            <td>14:00</td>
+            <td id="s13"></td>
+            <td>20:00</td>
+            <td id="x13"></td>
+          </tr>
         </tbody>
       </table>
 
@@ -132,6 +156,10 @@
         $('#s7').html((num + 1.2).toFixed(1))
         $('#s8').html((num + 1.4).toFixed(1))
         $('#s9').html((num + 1.6).toFixed(1))
+        $('#s10').html((num + 1.8).toFixed(1))
+        $('#s11').html((num + 2.0).toFixed(1))
+        $('#s12').html((num + 2.2).toFixed(1))
+        $('#s13').html((num + 2.4).toFixed(1))
 
         $('#x1').html((num + 2.4).toFixed(1))
         $('#x2').html((num + 2.2).toFixed(1))
@@ -142,6 +170,10 @@
         $('#x7').html((num + 1.2).toFixed(1))
         $('#x8').html((num + 1.0).toFixed(1))
         $('#x9').html((num + 0.8).toFixed(1))
+        $('#x10').html((num + 0.6).toFixed(1))
+        $('#x11').html((num + 0.4).toFixed(1))
+        $('#x12').html((num + 0.2).toFixed(1))
+        $('#x13').html(num.toFixed(1))
       }
       wendu()
       $('#ipt').on('keyup', function () {
