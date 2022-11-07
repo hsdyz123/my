@@ -26,7 +26,7 @@
   <body>
     <div id="app">
       <h1>照度的随机数值</h1>
-      <h4>注：四个随机数值是前面填的数±8</h4>
+      <h4>注：填入的数为最小值，四个随机数值是前面填的数+16范围内的数</h4>
       <h4>注2：输入框内按任意键可以更换数据</h4>
       <table align="" border="1" cellpadding="10" cellspacing="0">
         <tr>
@@ -39,7 +39,7 @@
         </tr>
         <tr>
           <td>1</td>
-          <td><input type="text" id="ipt1" value="300" /></td>
+          <td>min: <input type="text" id="ipt1" value="300" /></td>
           <td id="zd11"></td>
           <td id="zd12"></td>
           <td id="zd13"></td>
@@ -47,7 +47,7 @@
         </tr>
         <tr>
           <td>2</td>
-          <td><input type="text" id="ipt2" value="310" /></td>
+          <td>min: <input type="text" id="ipt2" value="310" /></td>
           <td id="zd21"></td>
           <td id="zd22"></td>
           <td id="zd23"></td>
@@ -55,7 +55,7 @@
         </tr>
         <tr>
           <td>3</td>
-          <td><input type="text" id="ipt3" value="320" /></td>
+          <td>min: <input type="text" id="ipt3" value="320" /></td>
           <td id="zd31"></td>
           <td id="zd32"></td>
           <td id="zd33"></td>
@@ -63,7 +63,7 @@
         </tr>
         <tr>
           <td>4</td>
-          <td><input type="text" id="ipt4" value="330" /></td>
+          <td>min: <input type="text" id="ipt4" value="330" /></td>
           <td id="zd41"></td>
           <td id="zd42"></td>
           <td id="zd43"></td>
@@ -71,7 +71,7 @@
         </tr>
         <tr>
           <td>5</td>
-          <td><input type="text" id="ipt5" value="340" /></td>
+          <td>min: <input type="text" id="ipt5" value="340" /></td>
           <td id="zd51"></td>
           <td id="zd52"></td>
           <td id="zd53"></td>
@@ -79,7 +79,7 @@
         </tr>
         <tr>
           <td>6</td>
-          <td><input type="text" id="ipt6" value="350" /></td>
+          <td>min: <input type="text" id="ipt6" value="350" /></td>
           <td id="zd61"></td>
           <td id="zd62"></td>
           <td id="zd63"></td>
@@ -87,7 +87,7 @@
         </tr>
         <tr>
           <td>7</td>
-          <td><input type="text" id="ipt7" value="360" /></td>
+          <td>min: <input type="text" id="ipt7" value="360" /></td>
           <td id="zd71"></td>
           <td id="zd72"></td>
           <td id="zd73"></td>
@@ -95,7 +95,7 @@
         </tr>
         <tr>
           <td>8</td>
-          <td><input type="text" id="ipt8" value="370" /></td>
+          <td>min: <input type="text" id="ipt8" value="370" /></td>
           <td id="zd81"></td>
           <td id="zd82"></td>
           <td id="zd83"></td>
@@ -103,7 +103,7 @@
         </tr>
         <tr>
           <td>9</td>
-          <td><input type="text" id="ipt9" value="380" /></td>
+          <td>min: <input type="text" id="ipt9" value="380" /></td>
           <td id="zd91"></td>
           <td id="zd92"></td>
           <td id="zd93"></td>
@@ -111,7 +111,7 @@
         </tr>
         <tr>
           <td>10</td>
-          <td><input type="text" id="ipt10" value="390" /></td>
+          <td>min: <input type="text" id="ipt10" value="390" /></td>
           <td id="zd101"></td>
           <td id="zd102"></td>
           <td id="zd103"></td>
@@ -126,7 +126,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd1' + i).text(
-            $('#ipt1').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt1').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
@@ -135,7 +135,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd2' + i).text(
-            $('#ipt2').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt2').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
@@ -144,7 +144,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd3' + i).text(
-            $('#ipt3').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt3').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
@@ -153,7 +153,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd4' + i).text(
-            $('#ipt4').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt4').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
@@ -162,7 +162,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd5' + i).text(
-            $('#ipt5').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt5').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
@@ -171,7 +171,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd6' + i).text(
-            $('#ipt6').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt6').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
@@ -180,7 +180,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd7' + i).text(
-            $('#ipt7').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt7').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
@@ -189,7 +189,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd8' + i).text(
-            $('#ipt8').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt8').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
@@ -198,7 +198,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd9' + i).text(
-            $('#ipt9').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt9').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
@@ -207,7 +207,7 @@
         // 四个照度的随机值
         for (let i = 1; i <= 4; i++) {
           $('#zd10' + i).text(
-            $('#ipt10').val() - 8 + Math.floor(Math.random() * 16)
+            $('#ipt10').val() - 0 + Math.floor(Math.random() * 16)
           )
         }
       }
