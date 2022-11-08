@@ -5,13 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>https://hsdyz123.github.in/my/ --hsdyz 魂锁典狱长</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background-color: #24292f;
+      }
+      #txt {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 68vw;
+        /* height: 30vh; */
+        height: 0px;
+        margin: 0 auto;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+      }
+      h3 {
+        color: #fff;
+        font-style: italic;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      h3 a {
+        color: #fff;
+        text-decoration: none;
+      }
+      #link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        width: 68vw;
+        height: 40px;
+        border: 1px solid #fff;
+        border-radius: 6px;
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+        overflow: hidden;
+      }
+      #link::before {
+        content: '';
+        position: absolute;
+        top: -31px;
+        left: 50%;
+        width: 2px;
+        height: 30px;
+        background-color: #fff;
+      }
+      #link a {
+        display: inline-block;
+        width: calc(100% / 3);
+        height: 40px;
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+        /* background-color:aqua; */
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        line-height: 40px;
+      }
+      #link a:nth-child(1),
+      #link a:nth-child(2) {
+        border-right: 1px solid #fff;
+      }
+      #link a:hover {
+        background-color: #333;
+      }
+      #link a {
+        font-weight: 700;
+        font-style: italic;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    </style>
     <link rel="shortcut icon" href="./fluidicon.png" />
     <script src="./device.js"></script>
     <script src="./jquery.js"></script>
   </head>
   <body>
     <div id="app">
-      <p>暂无PC端，请切换至移动端</p>
+      <div id="txt">
+        <h3>“Oh, honey, it's not a lie.”</h3>
+        <h3>“It's our future.”</h3>
+        <h3>“We're going to Venice.”</h3>
+        <h3>“We're getting in that gondola.”</h3>
+        <h3 style="text-align: right">
+          ——《
+          <a
+            href="https://www.bilibili.com/video/BV1dW4y1e7ss"
+            style="text-decoration: underline"
+            >Grey's Anatomy</a
+          >
+          》
+        </h3>
+      </div>
+      <div id="link">
+        <a href="./work/">WORK</a>
+        <a href="./music/">MUSIC</a>
+        <a href="./files">FILES</a>
+      </div>
     </div>
 
     <script type="text/javascript">
@@ -26,9 +129,14 @@
       }
 
       console.info(
-        '%c' + '网站仅供个人使用！！！',
+        '%c' + '网站仅供个人测试使用！！！',
         'color:#000;font-weight:bolder;font-size:36px'
       )
+
+      $('#txt').animate({ height: '45vh' }, 1300)
+      // setTimeout(() => {
+      //   $('#txt').fadeIn(2000)
+      // }, 500)
     </script>
   </body>
 </html>
