@@ -175,17 +175,6 @@
       // 温度
       function wendu() {
         var num = $('#ipt').val() - 0
-        for (let i = 2; i <= 13; i++) {
-          num += 0.2
-          $('#s' + i).html(num.toFixed(1))
-          // console.log(num);
-        }
-        for (let i = 1; i <= 13; i++) {
-          $('#x' + i).html(num.toFixed(1))
-          num -= 0.2
-        }
-        
-        /*
         console.log(num)
         $('#s2').html((num + 0.2).toFixed(1))
         $('#s3').html((num + 0.4).toFixed(1))
@@ -213,7 +202,6 @@
         $('#x11').html((num + 0.4).toFixed(1))
         $('#x12').html((num + 0.2).toFixed(1))
         $('#x13').html(num.toFixed(1))
-        */
       }
       wendu()
       $('#ipt').on('keyup', function () {

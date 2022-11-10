@@ -45,14 +45,14 @@
           <th>折合紫外数据</th>
         </tr>
         <tr>
-          <td>紫外1：<input type="text" id="ipt1" value="0.33" /></td>
+          <td>紫外1：<input type="text" id="ipt1" value="0.16" /></td>
           <td id="jieguo" rowspan="3"></td>
         </tr>
         <tr>
-          <td>紫外2：<input type="text" id="ipt2" value="0.08" /></td>
+          <td>紫外2：<input type="text" id="ipt2" value="0.15" /></td>
         </tr>
         <tr>
-          <td>紫外3：<input type="text" id="ipt3" value="0.12" /></td>
+          <td>紫外3：<input type="text" id="ipt3" value="0.17" /></td>
         </tr>
       </table>
     </div>
@@ -78,9 +78,9 @@
 
       // 自动刷新三个数据
       $('#shuaxin').on('click', function () {
-        $('#ipt1').val((0.33 - 0.05 + Math.random() * 0.1).toFixed(2) - 0)
-        $('#ipt2').val((0.08 - 0.03 + Math.random() * 0.05).toFixed(2) - 0)
-        $('#ipt3').val((0.12 - 0.05 + Math.random() * 0.1).toFixed(2) - 0)
+        $('#ipt1').val((0.16 - 0.05 + Math.random() * 0.1).toFixed(2) - 0)
+        $('#ipt2').val((0.15 - 0.03 + Math.random() * 0.05).toFixed(2) - 0)
+        $('#ipt3').val((0.17 - 0.05 + Math.random() * 0.1).toFixed(2) - 0)
         jisuan()
       })
 

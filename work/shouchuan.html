@@ -26,9 +26,9 @@
   </head>
   <body>
     <div id="app">
-      <h1>手传振动随机数</h1>
-      <h4>注：刷新修改数值，结果=max×sqrt(2)</h4>
-      <h4>注2：输入框内按任意键可以更换数据</h4>
+      <h1 text="123">手传振动随机数</h1>
+      <h4>注：接触4h结果为最大值，接触8h结果=max×sqrt(2)</h4>
+      <h4>注2：刷新修改数值</h4>
       <button id="btn">刷新</button>
       <table align border="1" cellpadding="10" cellspacing="0">
         <tr>
@@ -48,9 +48,9 @@
 
     <script type="text/javascript">
       function sc() {
-        let aa = (1.2 + Math.random() * 0.6).toFixed(1)
-        let bb = (1.2 + Math.random() * 0.6).toFixed(1)
-        let cc = (1.2 + Math.random() * 0.6).toFixed(1)
+        let aa = (1.3 + Math.random() * 2).toFixed(1)
+        let bb = (1.3 + Math.random() * 2).toFixed(1)
+        let cc = (1.3 + Math.random() * 2).toFixed(1)
         $('#sc1').text(aa)
         $('#sc2').text(bb)
         $('#sc3').text(cc)
