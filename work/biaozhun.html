@@ -38,6 +38,9 @@
       #app #cy a {
         text-decoration: none;
       }
+      #app #cy a:hover {
+        text-decoration: underline;
+      }
       #app ul {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -64,6 +67,7 @@
       }
       #app ul li a:hover {
         background-color: aquamarine;
+        font-weight: 700;
       }
     </style>
     <link rel="shortcut icon" href="./fluidicon.png" />
@@ -76,12 +80,13 @@
       <input type="text" id="ipt" placeholder="搜索栏" />
       <div id="cy">
         常用：
-        <a href="javascript:;" id="NONE">清空搜索栏</a>、
+        <a href="javascript:;" id="NONE">清空</a>、
         <a href="javascript:;" id="NO2">氮</a>、
         <a href="javascript:;" id="CO2">碳</a>、
         <a href="javascript:;" id="SO2">硫</a>、
         <a href="javascript:;" id="RJQY">溶剂汽油</a>、
-        <a href="javascript:;" id="SB">苯</a>
+        <a href="javascript:;" id="SB">苯</a>、
+        <a href="javascript:;" id="WAN">烷</a>
       </div>
       <ul></ul>
     </div>
@@ -441,7 +446,7 @@
           $('#bz' + j).html('')
 
           $('#bz' + j).attr('href', newHref[j])
-          $('#bz' + j).html(newArr[j])
+          $('#bz' + j).html(j + 1 + '&nbsp&nbsp&nbsp' + newArr[j])
         }
       }
 
@@ -476,6 +481,10 @@
       })
       $('#SB').on('click', function () {
         $('#ipt').val('苯')
+        find()
+      })
+      $('#WAN').on('click', function () {
+        $('#ipt').val('烷')
         find()
       })
 
