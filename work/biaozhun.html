@@ -19,6 +19,9 @@
         background-color: #36a6f2;
         color: #fff;
       }
+      h1:hover {
+        cursor: pointer;
+      }
       input {
         width: 80vw;
         height: 40px;
@@ -65,7 +68,7 @@
     <script type="text/javascript">
       function find() {
         let href = [
-          'javascript:;',
+          './GBZT 160国标/GBZT 160.29-2004(工作场所空气有毒物质测定无机含氮化合物）.pdf',
           'javascript:;',
           'javascript:;',
           'javascript:;',
@@ -427,6 +430,11 @@
         setTimeout(() => {
           find()
         }, 500)
+      })
+
+      // 标题返回主页
+      $('h1').on('click', function () {
+        window.location.href = './'
       })
     </script>
   </body>
