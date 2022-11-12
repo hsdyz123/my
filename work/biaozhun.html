@@ -11,7 +11,7 @@
         padding: 0;
         text-align: center;
       }
-      h1 {
+      #app h1 {
         width: 100vw;
         height: 100px;
         line-height: 100px;
@@ -19,19 +19,29 @@
         background-color: #36a6f2;
         color: #fff;
       }
-      h1:hover {
+      #app h1:hover {
         cursor: pointer;
       }
-      input {
+      #app h4 {
+        font-size: 12px;
+        font-weight: 400;
+      }
+      #app input {
         width: 80vw;
         height: 40px;
         margin-top: 20px;
       }
-      ul {
+      #app #cy {
+        margin-top: 20px;
+      }
+      #app #cy a {
+        text-decoration: none;
+      }
+      #app ul {
         margin-top: 20px;
         margin-bottom: 20px;
       }
-      li {
+      #app ul li {
         width: 80vw;
         /* height: 40px; */
         /* line-height: 40px; */
@@ -40,7 +50,7 @@
         list-style: none;
         background-color: wheat;
       }
-      a {
+      #app ul li a {
         display: block;
         /* width: 100%; */
         /* height: 100%; */
@@ -51,7 +61,7 @@
         font-size: 14px;
         overflow: hidden;
       }
-      a:hover {
+      #app ul li a:hover {
         background-color: aquamarine;
       }
     </style>
@@ -61,7 +71,17 @@
   <body>
     <div id="app">
       <h1>职业卫生标准目录*</h1>
+      <h4>注：目前标准尚不完善</h4>
       <input type="text" id="ipt" placeholder="搜索栏" />
+      <div id="cy">
+        常用：
+        <a href="javascript:;" id="NONE">清空搜索栏</a>、
+        <a href="javascript:;" id="NO2">氮</a>、
+        <a href="javascript:;" id="CO2">碳</a>、
+        <a href="javascript:;" id="SO2">硫</a>、
+        <a href="javascript:;" id="RJQY">溶剂汽油</a>、
+        <a href="javascript:;" id="SB">苯</a>
+      </div>
       <ul></ul>
     </div>
 
@@ -430,6 +450,32 @@
         setTimeout(() => {
           find()
         }, 500)
+      })
+
+      // 常用按钮
+      $('#NONE').on('click', function () {
+        $('#ipt').val('')
+        find()
+      })
+      $('#NO2').on('click', function () {
+        $('#ipt').val('氮')
+        find()
+      })
+      $('#CO2').on('click', function () {
+        $('#ipt').val('碳')
+        find()
+      })
+      $('#SO2').on('click', function () {
+        $('#ipt').val('硫')
+        find()
+      })
+      $('#RJQY').on('click', function () {
+        $('#ipt').val('溶剂汽油')
+        find()
+      })
+      $('#SB').on('click', function () {
+        $('#ipt').val('苯')
+        find()
       })
 
       // 标题返回主页
