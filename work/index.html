@@ -19,18 +19,24 @@
         margin: 0 auto;
       }
       #ipt {
+        width: 216px;
         height: 40px;
         outline: 0;
         text-align: center;
+        margin: 0;
+        padding: 0;
         padding-right: 40px;
       }
       #btn {
         position: absolute;
-        right: 0;
+        right: 20px;
         top: 83px;
         width: 60px;
-        height: 46px;
+        height: 44px;
         margin: 0 auto;
+      }
+      #btn:hover {
+        cursor: pointer;
       }
       a {
         display: inline-block;
@@ -54,10 +60,12 @@
 
   <body>
     <div id="app">
-      <h1 style="margin-top: 20px">记录需求</h1>
+      <h1 style="padding-top: 20px">记录需求</h1>
       <br />
-      <input type="text" id="ipt" placeholder="夸克搜索" />
-      <button id="btn">搜索</button>
+      <div class="search">
+        <input type="text" id="ipt" placeholder="夸克搜索" autocomplete="off" />
+        <button id="btn">搜索</button>
+      </div>
       <a href="./zaosheng.html">噪声随机数</a>
       <a href="./gongpin.html">工频电场随机数</a>
       <a href="./ziwai.html">紫外辐射随机数</a>
