@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #app {
+        text-align: center;
+      }
+      table {
+        margin: 0 auto;
+      }
+      input {
+        width: 60px;
+        text-align: center;
+      }
+      h1,
+      #shuaxin:hover {
+        cursor: pointer;
+      }
+      #shuaxin {
+        width: 120px;
+        height: 40px;
+      }
+    </style>
+    <link rel="shortcut icon" href="./fluidicon.png" />
+    <!-- <script src="./device.js"></script> -->
+    <script src="./jquery.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>紫外辐射的随机数据</h1>
+      <h4>
+        注：紫外辐射的公式E<sub>eff</sub>
+        =0.00011*E<sub>A</sub>+0.64*E<sub>B</sub>+0.5*E<sub></sub>
+      </h4>
+      <h4>注2：输入框内按任意键可以更换数据</h4>
+      <button id="shuaxin">刷新</button>
+      <br /><br />
+      <table align border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>三个紫外数据</th>
+          <th>折合紫外数据</th>
+        </tr>
+        <tr>
+          <td>紫外1：<input type="text" id="ipt1" value="0.16" /></td>
+          <td id="jieguo" rowspan="3"></td>
+        </tr>
+        <tr>
+          <td>紫外2：<input type="text" id="ipt2" value="0.15" /></td>
+        </tr>
+        <tr>
+          <td>紫外3：<input type="text" id="ipt3" value="0.17" /></td>
+        </tr>
+      </table>
+    </div>
+
+    <script type="text/javascript">
+      function jisuan() {
+        var num1 = $('#ipt1').val() - 0
+        var num2 = $('#ipt2').val() - 0
+        var num3 = $('#ipt3').val() - 0
+        var num = num1 * 0.00011 + num2 * 0.64 + num3 * 0.5
+        $('#jieguo').html(num.toFixed(2))
+      }
+      jisuan()
+      $('#ipt1').on('keyup', function () {
+        jisuan()
+      })
+      $('#ipt2').on('keyup', function () {
+        jisuan()
+      })
+      $('#ipt3').on('keyup', function () {
+        jisuan()
+      })
+
+      // 自动刷新三个数据
+      $('#shuaxin').on('click', function () {
+        $('#ipt1').val((0.16 - 0.05 + Math.random() * 0.1).toFixed(2) - 0)
+        $('#ipt2').val((0.15 - 0.03 + Math.random() * 0.05).toFixed(2) - 0)
+        $('#ipt3').val((0.17 - 0.05 + Math.random() * 0.1).toFixed(2) - 0)
+        jisuan()
+      })
+
+      // 标题返回主页
+      $('h1').on('click', function () {
+        window.location.href = './index.html'
+      })
+    </script>
+  </body>
+</html>

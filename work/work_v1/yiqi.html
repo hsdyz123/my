@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #app {
+        text-align: center;
+        width: 350px;
+        margin: 0 auto;
+        font-size: 14px;
+      }
+      h1:hover {
+        cursor: pointer;
+      }
+      table {
+        width: 350px;
+        margin: 0 auto;
+      }
+      #ipt {
+        text-align: center;
+      }
+      select {
+        width: 150px;
+        text-align: center;
+      }
+    </style>
+    <link rel="shortcut icon" href="./fluidicon.png" />
+    <script src="./jquery.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>仪器</h1>
+      <h4>注：001-133为表格左边，134-244为表格右边</h4>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+          <tr>
+            <th>类型</th>
+            <th>仪器</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>个体噪声</td>
+            <td>
+              <input type="checkbox" id="gzs-044" /><label for="gzs-044"
+                >044个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-045" /><label for="gzs-045"
+                >045个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-085" /><label for="gzs-085"
+                >085个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-086" /><label for="gzs-086"
+                >086个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-087" /><label for="gzs-087"
+                >087个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-088" /><label for="gzs-088"
+                >088个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-089" /><label for="gzs-089"
+                >089个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-090" /><label for="gzs-090"
+                >090个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-091" /><label for="gzs-091"
+                >091个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-092" /><label for="gzs-092"
+                >092个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-099" /><label for="gzs-099"
+                >099个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-100" /><label for="gzs-100"
+                >100个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-101" /><label for="gzs-101"
+                >101个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-102" /><label for="gzs-102"
+                >102个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-103" /><label for="gzs-103"
+                >103个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-104" /><label for="gzs-104"
+                >104个人声暴露计HS5628B</label
+              ><br />
+              <input type="checkbox" id="gzs-105" /><label for="gzs-105"
+                >105个人声暴露计（防爆）ASV5910</label
+              ><br />
+              <input type="checkbox" id="gzs-110" /><label for="gzs-110"
+                >110个人声暴露计（防爆）ASV5910</label
+              ><br />
+              <input type="checkbox" id="gzs-133" /><label for="gzs-133"
+                >133防爆型个人声暴露计HS5628BF</label
+              ><br />
+              <input type="checkbox" id="gzs-134" /><label for="gzs-134"
+                >134防爆型个人声暴露计HS5628BF</label
+              ><br />
+              <input type="checkbox" id="gzs-135" /><label for="gzs-135"
+                >135防爆型个人声暴露计HS5628BF</label
+              ><br />
+              <input type="checkbox" id="gzs-144" /><label for="gzs-144"
+                >144个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-145" /><label for="gzs-145"
+                >145个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-146" /><label for="gzs-146"
+                >146个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-147" /><label for="gzs-147"
+                >147防爆个人声暴露计HS5628BF</label
+              ><br />
+              <input type="checkbox" id="gzs-148" /><label for="gzs-148"
+                >148防爆个人声暴露计HS5628BF</label
+              ><br />
+              <input type="checkbox" id="gzs-199" /><label for="gzs-199"
+                >199个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-200" /><label for="gzs-200"
+                >200个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-201" /><label for="gzs-201"
+                >201个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-202" /><label for="gzs-202"
+                >202个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-203" /><label for="gzs-203"
+                >203个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-204" /><label for="gzs-204"
+                >204个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-205" /><label for="gzs-205"
+                >205个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-206" /><label for="gzs-206"
+                >206个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-207" /><label for="gzs-207"
+                >207个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-208" /><label for="gzs-208"
+                >208个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-209" /><label for="gzs-209"
+                >209个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-210" /><label for="gzs-210"
+                >210个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-211" /><label for="gzs-211"
+                >211个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-212" /><label for="gzs-212"
+                >212个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-213" /><label for="gzs-213"
+                >213个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-214" /><label for="gzs-214"
+                >214本安型个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-215" /><label for="gzs-215"
+                >215本安型个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-216" /><label for="gzs-216"
+                >216本安型个人声暴露计HS5910</label
+              ><br />
+              <input type="checkbox" id="gzs-217" /><label for="gzs-217"
+                >217本安型个人声暴露计HS5910</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>个体粉尘</td>
+            <td>
+              <input type="checkbox" id="gfc-021" /><label for="gfc-021"
+                >021个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-022" /><label for="gfc-022"
+                >022个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-023" /><label for="gfc-023"
+                >023个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-024" /><label for="gfc-024"
+                >024防爆个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-025" /><label for="gfc-025"
+                >025防爆个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-026" /><label for="gfc-026"
+                >026个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-027" /><label for="gfc-027"
+                >027个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-028" /><label for="gfc-028"
+                >028个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-029" /><label for="gfc-029"
+                >029个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-030" /><label for="gfc-030"
+                >030防爆个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-031" /><label for="gfc-031"
+                >031防爆个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-117" /><label for="gfc-117"
+                >117防爆型个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-118" /><label for="gfc-118"
+                >118防爆型个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-119" /><label for="gfc-119"
+                >119个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-120" /><label for="gfc-120"
+                >120个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-139" /><label for="gfc-139"
+                >139防爆个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-140" /><label for="gfc-140"
+                >140防爆个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-141" /><label for="gfc-141"
+                >141个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-142" /><label for="gfc-142"
+                >142个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-143" /><label for="gfc-143"
+                >143个体粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="gfc-218" /><label for="gfc-218"
+                >218个体粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="gfc-219" /><label for="gfc-219"
+                >219个体粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="gfc-220" /><label for="gfc-220"
+                >220个体粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="gfc-221" /><label for="gfc-221"
+                >221个体粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="gfc-222" /><label for="gfc-222"
+                >222个体粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="gfc-223" /><label for="gfc-223"
+                >223个体粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="gfc-224" /><label for="gfc-224"
+                >224个体粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="gfc-225" /><label for="gfc-225"
+                >225个体粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="gfc-226" /><label for="gfc-226"
+                >226个体粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="gfc-227" /><label for="gfc-227"
+                >227个体粉尘采样仪</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>个体大气</td>
+            <td>
+              <input type="checkbox" id="gdq-011" /><label for="gdq-011"
+                >011防爆个体大气采样器</label
+              ><br />
+              <input type="checkbox" id="gdq-012" /><label for="gdq-012"
+                >012防爆个体大气采样器</label
+              ><br />
+              <input type="checkbox" id="gdq-013" /><label for="gdq-013"
+                >013防爆个体大气采样器</label
+              ><br />
+              <input type="checkbox" id="gdq-014" /><label for="gdq-014"
+                >014防爆个体大气采样器</label
+              ><br />
+              <input type="checkbox" id="gdq-016" /><label for="gdq-016"
+                >016个体大气采样器</label
+              ><br />
+              <input type="checkbox" id="gdq-017" /><label for="gdq-017"
+                >017个体大气采样器</label
+              ><br />
+              <input type="checkbox" id="gdq-115" /><label for="gdq-115"
+                >115个体大气采样器</label
+              ><br />
+              <input type="checkbox" id="gdq-116" /><label for="gdq-116"
+                >116个体大气采样器</label
+              ><br />
+              <input type="checkbox" id="gdq-228" /><label for="gdq-228"
+                >228防爆个体大气采样仪</label
+              ><br />
+              <input type="checkbox" id="gdq-229" /><label for="gdq-229"
+                >229防爆个体大气采样仪</label
+              ><br />
+              <input type="checkbox" id="gdq-230" /><label for="gdq-230"
+                >230防爆个体大气采样仪</label
+              ><br />
+              <input type="checkbox" id="gdq-231" /><label for="gdq-231"
+                >231防爆个体大气采样仪</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>定点噪声</td>
+            <td>
+              <input type="checkbox" id="zs-035" /><label for="zs-035"
+                >035本安型噪声分析仪</label
+              ><br />
+              <input type="checkbox" id="zs-046" /><label for="zs-046"
+                >046倍频程声级计</label
+              ><br />
+              <input type="checkbox" id="zs-149" /><label for="zs-149"
+                >149倍频程声级计</label
+              ><br />
+              <input type="checkbox" id="zs-238" /><label for="zs-238"
+                >238噪声分析仪</label
+              ><br />
+              <input type="checkbox" id="zs-239" /><label for="zs-239"
+                >239噪声分析仪</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>定点粉尘</td>
+            <td>
+              <input type="checkbox" id="fc-032" /><label for="fc-032"
+                >032防爆粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="fc-034" /><label for="fc-034"
+                >034粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="fc-036" /><label for="fc-036"
+                >036防爆粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="fc-121" /><label for="fc-121"
+                >121防爆型粉尘采样器</label
+              ><br />
+              <input type="checkbox" id="fc-154" /><label for="fc-154"
+                >154粉尘采样器（防爆）</label
+              ><br />
+              <input type="checkbox" id="fc-155" /><label for="fc-155"
+                >155粉尘采样器（防爆）</label
+              ><br />
+              <input type="checkbox" id="fc-156" /><label for="fc-156"
+                >156粉尘采样器（防爆）</label
+              ><br />
+              <input type="checkbox" id="fc-232" /><label for="fc-232"
+                >232防爆粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="fc-233" /><label for="fc-233"
+                >233防爆粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="fc-234" /><label for="fc-234"
+                >234防爆粉尘采样仪</label
+              ><br />
+              <input type="checkbox" id="fc-235" /><label for="fc-235"
+                >235防爆粉尘采样仪</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>定点大气</td>
+            <td>
+              <input type="checkbox" id="dq-019" /><label for="dq-019"
+                >019防爆大气采样器</label
+              ><br />
+              <input type="checkbox" id="dq-020" /><label for="dq-020"
+                >020防爆大气采样器</label
+              ><br />
+              <input type="checkbox" id="dq-095" /><label for="dq-095"
+                >095防爆大气采样器</label
+              ><br />
+              <input type="checkbox" id="dq-096" /><label for="dq-096"
+                >096防爆大气采样器</label
+              ><br />
+              <input type="checkbox" id="dq-097" /><label for="dq-097"
+                >097防爆大气采样器</label
+              ><br />
+              <input type="checkbox" id="dq-098" /><label for="dq-098"
+                >098防爆大气采样器</label
+              ><br />
+              <input type="checkbox" id="dq-243" /><label for="dq-243"
+                >243大气采样仪</label
+              ><br />
+              <input type="checkbox" id="dq-244" /><label for="dq-244"
+                >244大气采样仪</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>定点高温</td>
+            <td>
+              <input type="checkbox" id="gw-039" /><label for="gw-039"
+                >039黑球、湿球温度计</label
+              ><br />
+              <input type="checkbox" id="gw-106" /><label for="gw-106"
+                >106WBGT指数仪</label
+              ><br />
+              <input type="checkbox" id="gw-237" /><label for="gw-237"
+                >237WBGT指数仪</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>定点紫外</td>
+            <td>
+              <input type="checkbox" id="zw-054" /><label for="zw-054"
+                >054紫外辐照计UV-B</label
+              ><br />
+              <input type="checkbox" id="zw-078" /><label for="zw-078"
+                >078紫外辐照计TN2340</label
+              ><br />
+              <input type="checkbox" id="zw-241" /><label for="zw-241"
+                >241紫外辐照计UV-A</label
+              ><br />
+              <input type="checkbox" id="zw-242" /><label for="zw-242"
+                >242紫外辐照计UV-B</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>定点工频</td>
+            <td>
+              <input type="checkbox" id="gp-052" /><label for="gp-052"
+                >052工频电场测定仪</label
+              ><br />
+              <input type="checkbox" id="gp-112" /><label for="gp-112"
+                >112工频电场测定仪</label
+              ><br />
+              <input type="checkbox" id="gp-186" /><label for="gp-186"
+                >186工频电磁辐射测量仪</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>定点照度</td>
+            <td>
+              <input type="checkbox" id="zd-041" /><label for="zd-041"
+                >041照度计</label
+              ><br />
+              <input type="checkbox" id="zd-111" /><label for="zd-111"
+                >111照度计</label
+              ><br />
+              <input type="checkbox" id="zd-240" /><label for="zd-240"
+                >240数位式照度计</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>定点振动</td>
+            <td>
+              <input type="checkbox" id="sc-181" /><label for="sc-181"
+                >181手传振动测定仪</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>温湿度计</td>
+            <td>
+              <input type="checkbox" id="ws-038" /><label for="ws-038"
+                >038温湿度计</label
+              ><br />
+              <input type="checkbox" id="ws-108" /><label for="ws-108"
+                >108温湿度计</label
+              ><br />
+              <input type="checkbox" id="ws-236" /><label for="ws-236"
+                >236湿度计</label
+              ><br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script type="text/javascript">
+      $('h1').on('click', function () {
+        window.location.href = './'
+      })
+    </script>
+  </body>
+</html>

@@ -11,6 +11,10 @@
         padding: 0;
         text-align: center;
       }
+      iframe {
+        width: 100vw;
+        height: 100vh;
+      }
       #app h1 {
         width: 100vw;
         height: 100px;
@@ -74,6 +78,7 @@
     <script src="./jquery.js"></script>
   </head>
   <body>
+    <iframe src="about:blank" frameborder="0" style="display: none"></iframe>
     <div id="app">
       <h1>职业卫生标准目录</h1>
       <h4>注：目前标准尚不完善</h4>
@@ -520,7 +525,7 @@
 
       // 标题返回主页
       $('h1').on('click', function () {
-        window.location.href = './'
+        window.location.href = './index.html'
       })
     </script>
   </body>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      h1:hover {
+        cursor: pointer;
+      }
+      button {
+        width: 160px;
+        height: 40px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      table {
+        margin: 0 auto;
+      }
+      input {
+        width: 40px;
+        text-align: center;
+      }
+    </style>
+    <script src="./jquery.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>工频电场的随机数值</h1>
+      <h4>注：工频的随机数值全部在0.010范围内</h4>
+      <h4>注2：输入框内按任意键可以更换数据</h4>
+      <br />
+      <table align="" border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>序号</th>
+          <th>输入工频</th>
+          <th>工频1</th>
+          <th>工频2</th>
+          <th>工频3</th>
+          <th>平均工频</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input type="text" id="ipt1" value="0.015" /></td>
+          <td id="gp11"></td>
+          <td id="gp12"></td>
+          <td id="gp13"></td>
+          <td id="gp14"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input type="text" id="ipt2" value="0.015" /></td>
+          <td id="gp21"></td>
+          <td id="gp22"></td>
+          <td id="gp23"></td>
+          <td id="gp24"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="text" id="ipt3" value="0.015" /></td>
+          <td id="gp31"></td>
+          <td id="gp32"></td>
+          <td id="gp33"></td>
+          <td id="gp34"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input type="text" id="ipt4" value="0.015" /></td>
+          <td id="gp41"></td>
+          <td id="gp42"></td>
+          <td id="gp43"></td>
+          <td id="gp44"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><input type="text" id="ipt5" value="0.015" /></td>
+          <td id="gp51"></td>
+          <td id="gp52"></td>
+          <td id="gp53"></td>
+          <td id="gp54"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><input type="text" id="ipt6" value="0.015" /></td>
+          <td id="gp61"></td>
+          <td id="gp62"></td>
+          <td id="gp63"></td>
+          <td id="gp64"></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><input type="text" id="ipt7" value="0.015" /></td>
+          <td id="gp71"></td>
+          <td id="gp72"></td>
+          <td id="gp73"></td>
+          <td id="gp74"></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><input type="text" id="ipt8" value="0.015" /></td>
+          <td id="gp81"></td>
+          <td id="gp82"></td>
+          <td id="gp83"></td>
+          <td id="gp84"></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><input type="text" id="ipt9" value="0.015" /></td>
+          <td id="gp91"></td>
+          <td id="gp92"></td>
+          <td id="gp93"></td>
+          <td id="gp94"></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><input type="text" id="ipt10" value="0.015" /></td>
+          <td id="gp101"></td>
+          <td id="gp102"></td>
+          <td id="gp103"></td>
+          <td id="gp104"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      function gp1() {
+        $('#gp11').text(
+          ($('#ipt1').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp12').text(
+          ($('#ipt1').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp13').text(
+          ($('#ipt1').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp14').text(
+          (
+            (parseFloat($('#gp11').text()) +
+              parseFloat($('#gp12').text()) +
+              parseFloat($('#gp13').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+      function gp2() {
+        $('#gp21').text(
+          ($('#ipt2').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp22').text(
+          ($('#ipt2').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp23').text(
+          ($('#ipt2').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp24').text(
+          (
+            (parseFloat($('#gp21').text()) +
+              parseFloat($('#gp22').text()) +
+              parseFloat($('#gp23').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+      function gp3() {
+        $('#gp31').text(
+          ($('#ipt3').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp32').text(
+          ($('#ipt3').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp33').text(
+          ($('#ipt3').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp34').text(
+          (
+            (parseFloat($('#gp31').text()) +
+              parseFloat($('#gp32').text()) +
+              parseFloat($('#gp33').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+      function gp4() {
+        $('#gp41').text(
+          ($('#ipt4').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp42').text(
+          ($('#ipt4').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp43').text(
+          ($('#ipt4').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp44').text(
+          (
+            (parseFloat($('#gp41').text()) +
+              parseFloat($('#gp42').text()) +
+              parseFloat($('#gp43').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+      function gp5() {
+        $('#gp51').text(
+          ($('#ipt5').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp52').text(
+          ($('#ipt5').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp53').text(
+          ($('#ipt5').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp54').text(
+          (
+            (parseFloat($('#gp51').text()) +
+              parseFloat($('#gp52').text()) +
+              parseFloat($('#gp53').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+      function gp6() {
+        $('#gp61').text(
+          ($('#ipt6').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp62').text(
+          ($('#ipt6').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp63').text(
+          ($('#ipt6').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp64').text(
+          (
+            (parseFloat($('#gp61').text()) +
+              parseFloat($('#gp62').text()) +
+              parseFloat($('#gp63').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+      function gp7() {
+        $('#gp71').text(
+          ($('#ipt7').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp72').text(
+          ($('#ipt7').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp73').text(
+          ($('#ipt7').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp74').text(
+          (
+            (parseFloat($('#gp71').text()) +
+              parseFloat($('#gp72').text()) +
+              parseFloat($('#gp73').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+      function gp8() {
+        $('#gp81').text(
+          ($('#ipt8').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp82').text(
+          ($('#ipt8').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp83').text(
+          ($('#ipt8').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp84').text(
+          (
+            (parseFloat($('#gp81').text()) +
+              parseFloat($('#gp82').text()) +
+              parseFloat($('#gp83').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+      function gp9() {
+        $('#gp91').text(
+          ($('#ipt9').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp92').text(
+          ($('#ipt9').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp93').text(
+          ($('#ipt9').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp94').text(
+          (
+            (parseFloat($('#gp91').text()) +
+              parseFloat($('#gp92').text()) +
+              parseFloat($('#gp93').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+      function gp10() {
+        $('#gp101').text(
+          ($('#ipt10').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp102').text(
+          ($('#ipt10').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp103').text(
+          ($('#ipt10').val() - 0.005 + Math.random() * 0.01).toFixed(3)
+        )
+        $('#gp104').text(
+          (
+            (parseFloat($('#gp101').text()) +
+              parseFloat($('#gp102').text()) +
+              parseFloat($('#gp103').text())) /
+            3
+          ).toFixed(3)
+        )
+      }
+
+      gp1()
+      gp2()
+      gp3()
+      gp4()
+      gp5()
+      gp6()
+      gp7()
+      gp8()
+      gp9()
+      gp10()
+
+      $('#ipt1').on('keyup', function () {
+        gp1()
+      })
+      $('#ipt2').on('keyup', function () {
+        gp2()
+      })
+      $('#ipt3').on('keyup', function () {
+        gp3()
+      })
+      $('#ipt4').on('keyup', function () {
+        gp4()
+      })
+      $('#ipt5').on('keyup', function () {
+        gp5()
+      })
+      $('#ipt6').on('keyup', function () {
+        gp6()
+      })
+      $('#ipt7').on('keyup', function () {
+        gp7()
+      })
+      $('#ipt8').on('keyup', function () {
+        gp8()
+      })
+      $('#ipt9').on('keyup', function () {
+        gp9()
+      })
+      $('#ipt10').on('keyup', function () {
+        gp10()
+      })
+
+      // 标题返回主页
+      $('h1').on('click', function () {
+        window.location.href = './index.html'
+      })
+    </script>
+  </body>
+</html>

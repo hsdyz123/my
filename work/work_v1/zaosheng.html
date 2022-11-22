@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      h1:hover {
+        cursor: pointer;
+      }
+      table {
+        margin: 0 auto;
+      }
+      input {
+        width: 40px;
+        text-align: center;
+      }
+    </style>
+    <link rel="shortcut icon" href="./fluidicon.png" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>噪声的随机数值</h1>
+      <h4>注：三个随机数值是前面填的数±0.5</h4>
+      <h4>注2：输入框内按任意键可以更换数据</h4>
+      <table align="" border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>序号</th>
+          <th>噪声数值</th>
+          <th>噪声1</th>
+          <th>噪声2</th>
+          <th>噪声3</th>
+          <th>平均噪声</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input type="text" id="ipt1" value="80" /></td>
+          <td id="zs11"></td>
+          <td id="zs12"></td>
+          <td id="zs13"></td>
+          <td id="zs14"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input type="text" id="ipt2" value="81" /></td>
+          <td id="zs21"></td>
+          <td id="zs22"></td>
+          <td id="zs23"></td>
+          <td id="zs24"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="text" id="ipt3" value="82" /></td>
+          <td id="zs31"></td>
+          <td id="zs32"></td>
+          <td id="zs33"></td>
+          <td id="zs34"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input type="text" id="ipt4" value="83" /></td>
+          <td id="zs41"></td>
+          <td id="zs42"></td>
+          <td id="zs43"></td>
+          <td id="zs44"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><input type="text" id="ipt5" value="84" /></td>
+          <td id="zs51"></td>
+          <td id="zs52"></td>
+          <td id="zs53"></td>
+          <td id="zs54"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><input type="text" id="ipt6" value="85" /></td>
+          <td id="zs61"></td>
+          <td id="zs62"></td>
+          <td id="zs63"></td>
+          <td id="zs64"></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><input type="text" id="ipt7" value="86" /></td>
+          <td id="zs71"></td>
+          <td id="zs72"></td>
+          <td id="zs73"></td>
+          <td id="zs74"></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><input type="text" id="ipt8" value="87" /></td>
+          <td id="zs81"></td>
+          <td id="zs82"></td>
+          <td id="zs83"></td>
+          <td id="zs84"></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><input type="text" id="ipt9" value="88" /></td>
+          <td id="zs91"></td>
+          <td id="zs92"></td>
+          <td id="zs93"></td>
+          <td id="zs94"></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><input type="text" id="ipt10" value="89" /></td>
+          <td id="zs101"></td>
+          <td id="zs102"></td>
+          <td id="zs103"></td>
+          <td id="zs104"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      // 第一个的函数
+      function zs1() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs1' + i).text(
+            ($('#ipt1').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs14').text(
+          (
+            (parseFloat($('#zs11').text()) +
+              parseFloat($('#zs12').text()) +
+              parseFloat($('#zs13').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+      // 第二个的函数
+      function zs2() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs2' + i).text(
+            ($('#ipt2').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs24').text(
+          (
+            (parseFloat($('#zs21').text()) +
+              parseFloat($('#zs22').text()) +
+              parseFloat($('#zs23').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+      // 第三个的函数
+      function zs3() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs3' + i).text(
+            ($('#ipt3').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs34').text(
+          (
+            (parseFloat($('#zs31').text()) +
+              parseFloat($('#zs32').text()) +
+              parseFloat($('#zs33').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+      // 第四个的函数
+      function zs4() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs4' + i).text(
+            ($('#ipt4').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs44').text(
+          (
+            (parseFloat($('#zs41').text()) +
+              parseFloat($('#zs42').text()) +
+              parseFloat($('#zs43').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+      // 第五个的函数
+      function zs5() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs5' + i).text(
+            ($('#ipt5').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs54').text(
+          (
+            (parseFloat($('#zs51').text()) +
+              parseFloat($('#zs52').text()) +
+              parseFloat($('#zs53').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+      // 第六个的函数
+      function zs6() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs6' + i).text(
+            ($('#ipt6').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs64').text(
+          (
+            (parseFloat($('#zs61').text()) +
+              parseFloat($('#zs62').text()) +
+              parseFloat($('#zs63').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+      // 第七个的函数
+      function zs7() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs7' + i).text(
+            ($('#ipt7').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs74').text(
+          (
+            (parseFloat($('#zs71').text()) +
+              parseFloat($('#zs72').text()) +
+              parseFloat($('#zs73').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+      // 第八个的函数
+      function zs8() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs8' + i).text(
+            ($('#ipt8').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs84').text(
+          (
+            (parseFloat($('#zs81').text()) +
+              parseFloat($('#zs82').text()) +
+              parseFloat($('#zs83').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+      // 第九个的函数
+      function zs9() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs9' + i).text(
+            ($('#ipt9').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs94').text(
+          (
+            (parseFloat($('#zs91').text()) +
+              parseFloat($('#zs92').text()) +
+              parseFloat($('#zs93').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+      // 第十个的函数
+      function zs10() {
+        // 前三个噪声的随机值
+        for (let i = 1; i <= 3; i++) {
+          $('#zs10' + i).text(
+            ($('#ipt10').val() - 0.5 + Math.random()).toFixed(1)
+          )
+        }
+        // 第四个数值是前三个的平均值
+        $('#zs104').text(
+          (
+            (parseFloat($('#zs101').text()) +
+              parseFloat($('#zs102').text()) +
+              parseFloat($('#zs103').text())) /
+            3
+          ).toFixed(1)
+        )
+      }
+
+      // 进入页面先调用
+      zs1()
+      zs2()
+      zs3()
+      zs4()
+      zs5()
+      zs6()
+      zs7()
+      zs8()
+      zs9()
+      zs10()
+
+      // 输入框改变时调用
+      $('#ipt1').on('keyup', function () {
+        zs1()
+      })
+      $('#ipt2').on('keyup', function () {
+        zs2()
+      })
+      $('#ipt3').on('keyup', function () {
+        zs3()
+      })
+      $('#ipt4').on('keyup', function () {
+        zs4()
+      })
+      $('#ipt5').on('keyup', function () {
+        zs5()
+      })
+      $('#ipt6').on('keyup', function () {
+        zs6()
+      })
+      $('#ipt7').on('keyup', function () {
+        zs7()
+      })
+      $('#ipt8').on('keyup', function () {
+        zs8()
+      })
+      $('#ipt9').on('keyup', function () {
+        zs9()
+      })
+      $('#ipt10').on('keyup', function () {
+        zs10()
+      })
+
+      // 标题返回主页
+      $('h1').on('click', function () {
+        window.location.href = './index.html'
+      })
+    </script>
+  </body>
+</html>

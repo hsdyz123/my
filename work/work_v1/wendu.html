@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #app {
+        width: 360px;
+        margin: 0 auto;
+        font-size: 14px;
+        text-align: center;
+      }
+      h1:hover {
+        cursor: pointer;
+      }
+      table {
+        width: 360px;
+        margin: 0 auto;
+      }
+      #ipt {
+        text-align: center;
+      }
+    </style>
+    <link rel="shortcut icon" href="./fluidicon.png" />
+    <script src="./jquery.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>温度</h1>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+          <tr>
+            <th>时间</th>
+            <th>温度</th>
+            <th>湿度</th>
+            <th>时间</th>
+            <th>温度</th>
+            <th>湿度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8:00</td>
+            <td>
+              <input type="text" id="ipt" value="16.0" style="width: 35px" />
+            </td>
+            <td id="sd1"></td>
+            <td>14:00</td>
+            <td id="x1"></td>
+            <td id="sd21"></td>
+          </tr>
+          <tr>
+            <td>8:30</td>
+            <td id="s2"></td>
+            <td id="sd2"></td>
+            <td>14:30</td>
+            <td id="x2"></td>
+            <td id="sd22"></td>
+          </tr>
+          <tr>
+            <td>9:00</td>
+            <td id="s3"></td>
+            <td id="sd3"></td>
+            <td>15:00</td>
+            <td id="x3"></td>
+            <td id="sd23"></td>
+          </tr>
+          <tr>
+            <td>9:30</td>
+            <td id="s4"></td>
+            <td id="sd4"></td>
+            <td>15:30</td>
+            <td id="x4"></td>
+            <td id="sd24"></td>
+          </tr>
+          <tr>
+            <td>10:00</td>
+            <td id="s5"></td>
+            <td id="sd5"></td>
+            <td>16:00</td>
+            <td id="x5"></td>
+            <td id="sd25"></td>
+          </tr>
+          <tr>
+            <td>10:30</td>
+            <td id="s6"></td>
+            <td id="sd6"></td>
+            <td>16:30</td>
+            <td id="x6"></td>
+            <td id="sd26"></td>
+          </tr>
+          <tr>
+            <td>11:00</td>
+            <td id="s7"></td>
+            <td id="sd7"></td>
+            <td>17:00</td>
+            <td id="x7"></td>
+            <td id="sd27"></td>
+          </tr>
+          <tr>
+            <td>11:30</td>
+            <td id="s8"></td>
+            <td id="sd8"></td>
+            <td>17:30</td>
+            <td id="x8"></td>
+            <td id="sd28"></td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td id="s9"></td>
+            <td id="sd9"></td>
+            <td>18:00</td>
+            <td id="x9"></td>
+            <td id="sd29"></td>
+          </tr>
+          <tr>
+            <td>12:30</td>
+            <td id="s10"></td>
+            <td id="sd10"></td>
+            <td>18:30</td>
+            <td id="x10"></td>
+            <td id="sd30"></td>
+          </tr>
+          <tr>
+            <td>13:00</td>
+            <td id="s11"></td>
+            <td id="sd11"></td>
+            <td>19:00</td>
+            <td id="x11"></td>
+            <td id="sd31"></td>
+          </tr>
+          <tr>
+            <td>13:30</td>
+            <td id="s12"></td>
+            <td id="sd12"></td>
+            <td>19:30</td>
+            <td id="x12"></td>
+            <td id="sd32"></td>
+          </tr>
+          <tr>
+            <td>14:00</td>
+            <td id="s13"></td>
+            <td id="sd13"></td>
+            <td>20:00</td>
+            <td id="x13"></td>
+            <td id="sd33"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- <h3>湿度</h3>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <td id="sd1"></td>
+          <td id="sd2"></td>
+          <td id="sd3"></td>
+          <td id="sd4"></td>
+          <td id="sd5"></td>
+          <td id="sd6"></td>
+        </tr>
+        <tr>
+          <td id="sd7"></td>
+          <td id="sd8"></td>
+          <td id="sd9"></td>
+          <td id="sd10"></td>
+          <td id="sd11"></td>
+          <td id="sd12"></td>
+        </tr>
+      </table> -->
+    </div>
+
+    <script type="text/javascript">
+      // 温度
+      function wendu() {
+        var num = $('#ipt').val() - 0
+        console.log(num)
+        $('#s2').html((num + 0.2).toFixed(1))
+        $('#s3').html((num + 0.4).toFixed(1))
+        $('#s4').html((num + 0.6).toFixed(1))
+        $('#s5').html((num + 0.8).toFixed(1))
+        $('#s6').html((num + 1.0).toFixed(1))
+        $('#s7').html((num + 1.2).toFixed(1))
+        $('#s8').html((num + 1.4).toFixed(1))
+        $('#s9').html((num + 1.6).toFixed(1))
+        $('#s10').html((num + 1.8).toFixed(1))
+        $('#s11').html((num + 2.0).toFixed(1))
+        $('#s12').html((num + 2.2).toFixed(1))
+        $('#s13').html((num + 2.4).toFixed(1))
+
+        $('#x1').html((num + 2.4).toFixed(1))
+        $('#x2').html((num + 2.2).toFixed(1))
+        $('#x3').html((num + 2.0).toFixed(1))
+        $('#x4').html((num + 1.8).toFixed(1))
+        $('#x5').html((num + 1.6).toFixed(1))
+        $('#x6').html((num + 1.4).toFixed(1))
+        $('#x7').html((num + 1.2).toFixed(1))
+        $('#x8').html((num + 1.0).toFixed(1))
+        $('#x9').html((num + 0.8).toFixed(1))
+        $('#x10').html((num + 0.6).toFixed(1))
+        $('#x11').html((num + 0.4).toFixed(1))
+        $('#x12').html((num + 0.2).toFixed(1))
+        $('#x13').html(num.toFixed(1))
+      }
+      wendu()
+      $('#ipt').on('keyup', function () {
+        wendu()
+      })
+      function shidu() {
+        for (let i = 1; i <= 100; i++) {
+          $('#sd' + i).html((Math.random() * 3 + 51).toFixed(1))
+        }
+      }
+      shidu()
+
+      // 标题返回主页
+      $('h1').on('click', function () {
+        window.location.href = './index.html'
+      })
+    </script>
+  </body>
+</html>

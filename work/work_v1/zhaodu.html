@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      h1:hover {
+        cursor: pointer;
+      }
+      table {
+        margin: 0 auto;
+      }
+      input {
+        width: 60px;
+        text-align: center;
+      }
+    </style>
+    <script src="./jquery.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>照度的随机数值</h1>
+      <h4>注：填入的数为最小值，四个随机数值是前面填的数+16范围内的数</h4>
+      <h4>注2：输入框内按任意键可以更换数据</h4>
+      <table align="" border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>序号</th>
+          <th>输入的照度数值</th>
+          <th>照度1</th>
+          <th>照度2</th>
+          <th>照度3</th>
+          <th>照度4</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>min: <input type="text" id="ipt1" value="300" /></td>
+          <td id="zd11"></td>
+          <td id="zd12"></td>
+          <td id="zd13"></td>
+          <td id="zd14"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>min: <input type="text" id="ipt2" value="310" /></td>
+          <td id="zd21"></td>
+          <td id="zd22"></td>
+          <td id="zd23"></td>
+          <td id="zd24"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>min: <input type="text" id="ipt3" value="320" /></td>
+          <td id="zd31"></td>
+          <td id="zd32"></td>
+          <td id="zd33"></td>
+          <td id="zd34"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>min: <input type="text" id="ipt4" value="330" /></td>
+          <td id="zd41"></td>
+          <td id="zd42"></td>
+          <td id="zd43"></td>
+          <td id="zd44"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>min: <input type="text" id="ipt5" value="340" /></td>
+          <td id="zd51"></td>
+          <td id="zd52"></td>
+          <td id="zd53"></td>
+          <td id="zd54"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>min: <input type="text" id="ipt6" value="350" /></td>
+          <td id="zd61"></td>
+          <td id="zd62"></td>
+          <td id="zd63"></td>
+          <td id="zd64"></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>min: <input type="text" id="ipt7" value="360" /></td>
+          <td id="zd71"></td>
+          <td id="zd72"></td>
+          <td id="zd73"></td>
+          <td id="zd74"></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>min: <input type="text" id="ipt8" value="370" /></td>
+          <td id="zd81"></td>
+          <td id="zd82"></td>
+          <td id="zd83"></td>
+          <td id="zd84"></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>min: <input type="text" id="ipt9" value="380" /></td>
+          <td id="zd91"></td>
+          <td id="zd92"></td>
+          <td id="zd93"></td>
+          <td id="zd94"></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>min: <input type="text" id="ipt10" value="390" /></td>
+          <td id="zd101"></td>
+          <td id="zd102"></td>
+          <td id="zd103"></td>
+          <td id="zd104"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      // 第一个的函数
+      function zd1() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd1' + i).text(
+            $('#ipt1').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+      // 第二个的函数
+      function zd2() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd2' + i).text(
+            $('#ipt2').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+      // 第三个的函数
+      function zd3() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd3' + i).text(
+            $('#ipt3').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+      // 第四个的函数
+      function zd4() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd4' + i).text(
+            $('#ipt4').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+      // 第五个的函数
+      function zd5() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd5' + i).text(
+            $('#ipt5').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+      // 第六个的函数
+      function zd6() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd6' + i).text(
+            $('#ipt6').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+      // 第七个的函数
+      function zd7() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd7' + i).text(
+            $('#ipt7').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+      // 第八个的函数
+      function zd8() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd8' + i).text(
+            $('#ipt8').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+      // 第九个的函数
+      function zd9() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd9' + i).text(
+            $('#ipt9').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+      // 第十个的函数
+      function zd10() {
+        // 四个照度的随机值
+        for (let i = 1; i <= 4; i++) {
+          $('#zd10' + i).text(
+            $('#ipt10').val() - 0 + Math.floor(Math.random() * 16)
+          )
+        }
+      }
+
+      // 进入页面先调用
+      zd1()
+      zd2()
+      zd3()
+      zd4()
+      zd5()
+      zd6()
+      zd7()
+      zd8()
+      zd9()
+      zd10()
+
+      // 输入框改变时调用
+      $('#ipt1').on('keyup', function () {
+        zd1()
+      })
+      $('#ipt2').on('keyup', function () {
+        zd2()
+      })
+      $('#ipt3').on('keyup', function () {
+        zd3()
+      })
+      $('#ipt4').on('keyup', function () {
+        zd4()
+      })
+      $('#ipt5').on('keyup', function () {
+        zd5()
+      })
+      $('#ipt6').on('keyup', function () {
+        zd6()
+      })
+      $('#ipt7').on('keyup', function () {
+        zd7()
+      })
+      $('#ipt8').on('keyup', function () {
+        zd8()
+      })
+      $('#ipt9').on('keyup', function () {
+        zd9()
+      })
+      $('#ipt10').on('keyup', function () {
+        zd10()
+      })
+
+      // 标题返回主页
+      $('h1').on('click', function () {
+        window.location.href = './index.html'
+      })
+    </script>
+  </body>
+</html>
