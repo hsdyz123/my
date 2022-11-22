@@ -3,45 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        margin: 0;
-      }
-      #app {
-        text-align: center;
-        width: 350px;
-        margin: 0 auto;
-        font-size: 14px;
-      }
-      h1:hover {
-        cursor: pointer;
-      }
-      table {
-        width: 350px;
-        margin: 0 auto;
-      }
-      #ipt {
-        text-align: center;
-      }
-      select {
-        width: 150px;
-        text-align: center;
-      }
-    </style>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>XB-equipment</title>
     <link rel="shortcut icon" href="./fluidicon.png" />
-    <script src="./jquery.js"></script>
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.css" />
+    <script src="./bootstrap-3.4.1-dist/js/jquery.js"></script>
+    <script src="./bootstrap-3.4.1-dist/js/bootstrap.js"></script>
   </head>
   <body>
-    <div id="app">
-      <h1>仪器</h1>
-      <h4>注：001-133为表格左边，134-244为表格右边</h4>
-      <table border="1" cellpadding="10" cellspacing="0">
+    <div class="container">
+      <!-- 页头 -->
+      <div class="page-header">
+        <h1>
+          设备 <small>XB-Demand</small>
+          <div
+            class="btn-group btn-group-md"
+            role="group"
+            aria-label="..."
+            style="float: right"
+          >
+            <button type="button" class="btn btn-default" id="btn_fanhui">
+              返回
+            </button>
+          </div>
+        </h1>
+      </div>
+      <!-- 提示 -->
+      <p class="bg-primary" style="padding: 10px; border-radius: 3px">
+        注：001-133为表格左边，134-244为表格右边
+      </p>
+      <!-- 表格 -->
+      <table class="table table-bordered text-center">
         <thead>
           <tr>
-            <th>类型</th>
-            <th>仪器</th>
+            <th class="text-center">类型</th>
+            <th class="text-center">仪器</th>
           </tr>
         </thead>
         <tbody>
@@ -494,7 +493,7 @@
     </div>
 
     <script type="text/javascript">
-      $('h1').on('click', function () {
+      $('#btn_fanhui').on('click', function () {
         window.location.href = './index.html'
       })
     </script>
