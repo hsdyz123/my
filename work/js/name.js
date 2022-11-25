@@ -49,56 +49,56 @@ var x1 = [
   '薛',
   '叶',
   '阎',
-  // '余',
-  // '潘',
-  // '杜',
-  // '戴',
-  // '夏',
-  // '钟',
-  // '汪',
-  // '田',
-  // '任',
-  // '姜',
-  // '范',
-  // '方',
-  // '石',
-  // '姚',
-  // '谭',
-  // '廖',
-  // '邹',
-  // '熊',
-  // '金',
-  // '陆',
-  // '郝',
-  // '孔',
-  // '白',
-  // '崔',
-  // '康',
-  // '毛',
-  // '邱',
-  // '秦',
-  // '江',
-  // '史',
-  // '顾',
-  // '侯',
-  // '邵',
-  // '孟',
-  // '龙',
-  // '万',
-  // '段',
-  // '漕',
-  // '钱',
-  // '汤',
-  // '尹',
-  // '黎',
-  // '易',
-  // '常',
-  // '武',
-  // '乔',
-  // '贺',
-  // '赖',
-  // '龚',
-  // '文',
+  '余',
+  '潘',
+  '杜',
+  '戴',
+  '夏',
+  '钟',
+  '汪',
+  '田',
+  '任',
+  '姜',
+  '范',
+  '方',
+  '石',
+  '姚',
+  '谭',
+  '廖',
+  '邹',
+  '熊',
+  '金',
+  '陆',
+  '郝',
+  '孔',
+  '白',
+  '崔',
+  '康',
+  '毛',
+  '邱',
+  '秦',
+  '江',
+  '史',
+  '顾',
+  '侯',
+  '邵',
+  '孟',
+  '龙',
+  '万',
+  '段',
+  '漕',
+  '钱',
+  '汤',
+  '尹',
+  '黎',
+  '易',
+  '常',
+  '武',
+  '乔',
+  '贺',
+  '赖',
+  '龚',
+  '文',
 ]
 
 var nan = [
@@ -927,61 +927,37 @@ var nv = [
   '梦',
 ]
 
-function fnan() {
-  $('#name_body').empty()
-  for (let i = 0; i < 50; i++) {
-    let a = x1[Math.floor(Math.random() * x1.length)]
-    let b = nan[Math.floor(Math.random() * nan.length)]
-    let c = nan[Math.floor(Math.random() * nan.length)]
-    $('#name_body').append(
-      `<p style="display: inline-block;padding: 0 8px;">${a}${b}${c}</p>`
-    )
-  }
-}
+var arr_name = [
+  // 定义男名函数
+  function () {
+    $('#name_body').empty()
+    for (let i = 0; i < 50; i++) {
+      let a = x1[Math.floor(Math.random() * x1.length)]
+      let b = nan[Math.floor(Math.random() * nan.length)]
+      let c = nan[Math.floor(Math.random() * nan.length)]
+      $('#name_body').append(
+        `<p style="display: inline-block;padding: 0 8px;">${a}${b}${c}</p>`
+      )
+    }
+  },
+  // 定义女名函数
+  function () {
+    $('#name_body').empty()
+    for (let i = 0; i < 50; i++) {
+      let a = x1[Math.floor(Math.random() * x1.length)]
+      let b = nv[Math.floor(Math.random() * nv.length)]
+      let c = nv[Math.floor(Math.random() * nv.length)]
+      $('#name_body').append(
+        `<p style="display: inline-block;padding: 0 8px;">${a}${b}${c}</p>`
+      )
+    }
+  },
+]
 
-function fnv() {
-  $('#name_body').empty()
-  for (let i = 0; i < 50; i++) {
-    let a = x1[Math.floor(Math.random() * x1.length)]
-    let b = nv[Math.floor(Math.random() * nv.length)]
-    let c = nv[Math.floor(Math.random() * nv.length)]
-    $('#name_body').append(
-      `<p style="display: inline-block;padding: 0 8px;">${a}${b}${c}</p>`
-    )
-  }
-}
-
-fnan()
+arr_name[0]()
 $('#btn_nan').on('click', function () {
-  fnan()
+  arr_name[0]()
 })
 $('#btn_nv').on('click', function () {
-  fnv()
+  arr_name[1]()
 })
-
-// for (let i = 0; i < 50; i++) {
-//   function fnan() {
-//     var a = x1[Math.floor(Math.random() * x1.length)]
-//     var b = nan[Math.floor(Math.random() * nan.length)]
-//     var c = nan[Math.floor(Math.random() * nan.length)]
-//     // console.log(a + b + c)
-//     // $('#p' + i).html(a + b + c)
-//     $('#name_body').append(`<p>${a}${b}${c}</p>`)
-//   }
-//   function fnv() {
-//     var x = x1[Math.floor(Math.random() * x1.length)]
-//     var y = nv[Math.floor(Math.random() * nv.length)]
-//     var z = nv[Math.floor(Math.random() * nv.length)]
-//     // console.log(x + y + z)
-//     $('#p' + i).html(x + y + z)
-//   }
-//   fnan()
-//   $('#btn_nan').on('click', function () {
-//     $('#name_body').empty()
-//     fnan()
-//   })
-//   $('#btn_nv').on('click', function () {
-//     $('#name_body').empty()
-//     fnv()
-//   })
-// }
