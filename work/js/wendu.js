@@ -41,4 +41,5 @@ arr_wendu[0]()
 arr_wendu[1]()
 $('#ipt_wendu').on('keyup', function () {
   arr_wendu[0]()
+  arr_wendu[1]()
 })
