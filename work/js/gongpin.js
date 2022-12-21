@@ -12,6 +12,14 @@ let arr_gongpin = [
     for (let i = 1; i <= 3; i++) {
       $('#gp1' + i).text(arr_gp[i])
     }
+    // 出现重复值时换新值
+    if (
+      $('#gp11').html() === $('#gp12').html() ||
+      $('#gp11').html() === $('#gp13').html() ||
+      $('#gp12').html() === $('#gp13').html()
+    ) {
+      arr_gongpin[1]()
+    }
     // 第四个数值是前三个的平均值
     $('#gp14').text(
       (
@@ -33,6 +41,14 @@ let arr_gongpin = [
     // 前三个工频的随机值
     for (let i = 1; i <= 3; i++) {
       $('#gp2' + i).text(arr_gp[i])
+    }
+    // 出现重复值时换新值
+    if (
+      $('#gp21').html() === $('#gp22').html() ||
+      $('#gp21').html() === $('#gp23').html() ||
+      $('#gp22').html() === $('#gp23').html()
+    ) {
+      arr_gongpin[2]()
     }
     // 第四个数值是前三个的平均值
     $('#gp24').text(
@@ -56,6 +72,14 @@ let arr_gongpin = [
     for (let i = 1; i <= 3; i++) {
       $('#gp3' + i).text(arr_gp[i])
     }
+    // 出现重复值时换新值
+    if (
+      $('#gp31').html() === $('#gp32').html() ||
+      $('#gp31').html() === $('#gp33').html() ||
+      $('#gp32').html() === $('#gp33').html()
+    ) {
+      arr_gongpin[3]()
+    }
     // 第四个数值是前三个的平均值
     $('#gp34').text(
       (
@@ -77,6 +101,14 @@ let arr_gongpin = [
     // 前三个工频的随机值
     for (let i = 1; i <= 3; i++) {
       $('#gp4' + i).text(arr_gp[i])
+    }
+    // 出现重复值时换新值
+    if (
+      $('#gp41').html() === $('#gp42').html() ||
+      $('#gp41').html() === $('#gp43').html() ||
+      $('#gp42').html() === $('#gp43').html()
+    ) {
+      arr_gongpin[4]()
     }
     // 第四个数值是前三个的平均值
     $('#gp44').text(
@@ -100,6 +132,14 @@ let arr_gongpin = [
     for (let i = 1; i <= 3; i++) {
       $('#gp5' + i).text(arr_gp[i])
     }
+    // 出现重复值时换新值
+    if (
+      $('#gp51').html() === $('#gp52').html() ||
+      $('#gp51').html() === $('#gp53').html() ||
+      $('#gp52').html() === $('#gp53').html()
+    ) {
+      arr_gongpin[5]()
+    }
     // 第四个数值是前三个的平均值
     $('#gp54').text(
       (
@@ -121,6 +161,14 @@ let arr_gongpin = [
     // 前三个工频的随机值
     for (let i = 1; i <= 3; i++) {
       $('#gp6' + i).text(arr_gp[i])
+    }
+    // 出现重复值时换新值
+    if (
+      $('#gp61').html() === $('#gp62').html() ||
+      $('#gp61').html() === $('#gp63').html() ||
+      $('#gp62').html() === $('#gp63').html()
+    ) {
+      arr_gongpin[6]()
     }
     // 第四个数值是前三个的平均值
     $('#gp64').text(
@@ -144,6 +192,14 @@ let arr_gongpin = [
     for (let i = 1; i <= 3; i++) {
       $('#gp7' + i).text(arr_gp[i])
     }
+    // 出现重复值时换新值
+    if (
+      $('#gp71').html() === $('#gp72').html() ||
+      $('#gp71').html() === $('#gp73').html() ||
+      $('#gp72').html() === $('#gp73').html()
+    ) {
+      arr_gongpin[7]()
+    }
     // 第四个数值是前三个的平均值
     $('#gp74').text(
       (
@@ -165,6 +221,14 @@ let arr_gongpin = [
     // 前三个工频的随机值
     for (let i = 1; i <= 3; i++) {
       $('#gp8' + i).text(arr_gp[i])
+    }
+    // 出现重复值时换新值
+    if (
+      $('#gp81').html() === $('#gp82').html() ||
+      $('#gp81').html() === $('#gp83').html() ||
+      $('#gp82').html() === $('#gp83').html()
+    ) {
+      arr_gongpin[8]()
     }
     // 第四个数值是前三个的平均值
     $('#gp84').text(
@@ -188,6 +252,14 @@ let arr_gongpin = [
     for (let i = 1; i <= 3; i++) {
       $('#gp9' + i).text(arr_gp[i])
     }
+    // 出现重复值时换新值
+    if (
+      $('#gp91').html() === $('#gp92').html() ||
+      $('#gp91').html() === $('#gp93').html() ||
+      $('#gp92').html() === $('#gp93').html()
+    ) {
+      arr_gongpin[9]()
+    }
     // 第四个数值是前三个的平均值
     $('#gp94').text(
       (
@@ -209,6 +281,14 @@ let arr_gongpin = [
     // 前三个工频的随机值
     for (let i = 1; i <= 3; i++) {
       $('#gp10' + i).text(arr_gp[i])
+    }
+    // 出现重复值时换新值
+    if (
+      $('#gp101').html() === $('#gp102').html() ||
+      $('#gp101').html() === $('#gp103').html() ||
+      $('#gp102').html() === $('#gp103').html()
+    ) {
+      arr_gongpin[10]()
     }
     // 第四个数值是前三个的平均值
     $('#gp104').text(
