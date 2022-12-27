@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../bootstrap-3.4.1-dist/css/bootstrap.min.css"
+    />
+    <script src="../bootstrap-3.4.1-dist/js/jquery.min.js"></script>
+    <script src="../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>报告-物理 <small>Physics for report</small></h1>
+      </div>
+      <div class="list-group" id="list"></div>
+    </div>
+
+    <script type="text/javascript">
+      let url = [
+        './html/检验的噪声数.html',
+        './html/检验的高温数.html',
+        './html/检验的工频数.html',
+        './html/检验的照度数.html',
+        './html/噪声工频的折算数值.html',
+      ]
+      let name = ['噪声', '高温', '工频', '照度', '折算']
+      let color = ['success', 'info', 'warning', 'danger', 'success']
+
+      // $('#list').empty()
+      for (let i = 0; i < url.length; i += 5) {
+        $('#list').append(`
+          <a href="${url[i]}" class="list-group-item ">${name[i]}</a>
+          <a href="${url[i + 1]}" class="list-group-item">${name[i + 1]}</a>
+          <a href="${url[i + 2]}" class="list-group-item">${name[i + 2]}</a>
+          <a href="${url[i + 3]}" class="list-group-item">${name[i + 3]}</a>
+          <a href="${url[i + 4]}" class="list-group-item">${name[i + 4]}</a>
+        `)
+      }
+
+      $('h1').on('click', function () {
+        window.location.href = '../index.html'
+      })
+    </script>
+  </body>
+</html>

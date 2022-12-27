@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../../bootstrap-3.4.1-dist/css/bootstrap.min.css"
+    />
+    <script src="../../bootstrap-3.4.1-dist/js/jquery.min.js"></script>
+    <script src="../../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <!-- <script src="./index.js"></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <!-- 噪声 -->
+      <div class="page-header">
+        <h1 onclick="window.location.href='../index.html'">
+          计算噪声的折算数值 <small>The converted value of noise</small>
+        </h1>
+      </div>
+
+      日工作小时：<input type="text" id="zs1" value="8" />
+      <hr />
+      周工所小时：<input type="text" id="zs2" value="42" />
+      <hr />
+      周工作天数：<input type="text" id="zs3" value="7" />
+      <hr />
+      测量的噪声：<input type="text" id="zs4" value="79.3" />
+      <hr />
+      <button id="btn1">计算</button>
+      <span id="span1"></span>
+
+      <!-- 工频 -->
+      <div class="page-header">
+        <h1 onclick="window.location.href='../index.html'">
+          计算工频的折算数值 <small>The converted value of power</small>
+        </h1>
+      </div>
+      <button id="btn2">计算</button>
+      <span id="span2"></span>
+      <hr />
+      <div class="inner">
+        接触时间：<input type="text" id="gp1" value="10" /><br />
+        工频数值：<input type="text" id="gp2" value="0.006" />
+        <hr />
+        接触时间：<input type="text" id="gp3" value="10" /><br />
+        工频数值：<input type="text" id="gp4" value="0.008" />
+        <hr />
+        接触时间：<input type="text" id="gp5" value="10" /><br />
+        工频数值：<input type="text" id="gp6" value="0.005" />
+        <hr />
+        接触时间：<input type="text" id="gp7" value="10" /><br />
+        工频数值：<input type="text" id="gp8" value="0.008" />
+        <hr />
+        接触时间：<input type="text" id="gp9" value="10" /><br />
+        工频数值：<input type="text" id="gp10" value="0.030" />
+        <hr />
+        接触时间：<input type="text" id="gp11" value="10" /><br />
+        工频数值：<input type="text" id="gp12" value="0.015" />
+        <hr />
+        接触时间：<input type="text" id="gp13" value="10" /><br />
+        工频数值：<input type="text" id="gp14" value="0" />
+        <hr />
+        接触时间：<input type="text" id="gp15" value="10" /><br />
+        工频数值：<input type="text" id="gp16" value="0" />
+        <hr />
+        接触时间：<input type="text" id="gp17" value="10" /><br />
+        工频数值：<input type="text" id="gp18" value="0" />
+        <hr />
+        接触时间：<input type="text" id="gp19" value="10" /><br />
+        工频数值：<input type="text" id="gp20" value="0" />
+        <hr />
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // 噪声
+      $('#btn1').click(() => {
+        let a = +$('#zs1').val()
+        let b = +$('#zs2').val()
+        let c = +$('#zs3').val()
+        let d = +$('#zs4').val()
+        let x = 10 * Math.log10((10 ** (0.1 * d) * c) / 5)
+        $('#span1').html(x.toFixed(1))
+      })
+
+      // 工频
+
+      $('#btn2').click(() => {
+        let arr = []
+        let num = 0
+        for (let i = 1; i <= 20; i++) {
+          arr.push(+$('#gp' + i).val())
+        }
+        // console.log(arr)
+        for (let i = 0; i < 20; i += 2) {
+          num += (arr[i] / 60) * arr[i + 1] ** 2
+        }
+        num = Math.sqrt(num / 8)
+        console.log(num)
+        $('#span2').html(num.toFixed(3))
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>报告-噪声</title>
+    <link
+      rel="stylesheet"
+      href="../../bootstrap-3.4.1-dist/css/bootstrap.min.css"
+    />
+    <script src="../../bootstrap-3.4.1-dist/js/jquery.min.js"></script>
+    <script src="../../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1 onclick="window.location.href='../index.html'">
+          报告-噪声 <small>Noise for report</small>
+        </h1>
+      </div>
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>噪声1</th>
+            <th>噪声2</th>
+            <th>噪声3</th>
+          </tr>
+        </thead>
+        <tbody id="tbody1"></tbody>
+      </table>
+
+      <hr />
+      <button class="info" id="btn1">刷新上面</button>
+      <button class="info" id="btn2">生成下面</button>
+      <span>选中复制即可</span>
+      <hr />
+
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>噪声1</th>
+            <th>噪声2</th>
+            <th>噪声3</th>
+            <th>平均噪声</th>
+          </tr>
+        </thead>
+        <tbody id="tbody2"></tbody>
+      </table>
+    </div>
+
+    <script type="text/javascript">
+      $('#btn1').click(function () {
+        let num = +prompt('噪声一共都多少个？')
+
+        for (let i = 1; i <= num; i++) {
+          $('#tbody1').append(`
+            <tr>
+              <td>${i}</td>
+              <td><input type="text" value="12.5" /></td>
+              <td><input type="text" value="12.6" /></td>
+              <td><input type="text" value="12.7" /></td>
+            </tr>
+          `)
+        }
+      })
+
+      $('#btn2').click(function () {
+        let arr = []
+        for (let i = 0; i < $('input').length; i++) {
+          arr.push(parseFloat($($('input')[i]).val()))
+        }
+        console.log(arr)
+
+        $('#tbody2').empty()
+        for (let i = 0; i < arr.length; i += 3) {
+          let a = arr[i]
+          let b = arr[i + 1]
+          let c = arr[i + 2]
+          let d = ((a + b + c) / 3).toFixed(1)
+          $('#tbody2').append(`
+            <tr>
+              <td>${a}</td>
+              <td>${b}</td>
+              <td>${c}</td>
+              <td>${d}</td>
+            </tr>
+          `)
+        }
+      })
+    </script>
+  </body>
+</html>

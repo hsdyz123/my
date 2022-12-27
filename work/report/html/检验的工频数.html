@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>报告-工频</title>
+    <link
+      rel="stylesheet"
+      href="../../bootstrap-3.4.1-dist/css/bootstrap.min.css"
+    />
+    <script src="../../bootstrap-3.4.1-dist/js/jquery.min.js"></script>
+    <script src="../../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1 onclick="window.location.href='../index.html'">
+          报告-工频 <small>Power for report</small>
+        </h1>
+      </div>
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>工频1</th>
+            <th>工频2</th>
+            <th>工频3</th>
+            <th>工频4</th>
+          </tr>
+        </thead>
+        <tbody id="tbody1"></tbody>
+      </table>
+
+      <hr />
+      <button class="info" id="btn1">刷新上面</button>
+      <button class="info" id="btn2">生成下面</button>
+      <span>选中复制即可</span>
+      <hr />
+
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>工频1</th>
+            <th>工频2</th>
+            <th>工频3</th>
+            <th>平均工频</th>
+          </tr>
+        </thead>
+        <tbody id="tbody2"></tbody>
+      </table>
+    </div>
+
+    <script type="text/javascript">
+      $('#btn1').click(function () {
+        let num = +prompt('工频一共都多少个？')
+
+        for (let i = 1; i <= num; i++) {
+          $('#tbody1').append(`
+            <tr>
+              <td>${i}</td>
+              <td><input type="text" value="15" /></td>
+              <td><input type="text" value="15" /></td>
+              <td><input type="text" value="15" /></td>
+              <td><input type="text" value="15" /></td>
+            </tr>
+          `)
+        }
+      })
+
+      $('#btn2').click(function () {
+        let arr = []
+        for (let i = 0; i < $('input').length; i++) {
+          arr.push(parseFloat($($('input')[i]).val()))
+        }
+        console.log(arr)
+
+        $('#tbody2').empty()
+        for (let i = 0; i < arr.length; i += 4) {
+          let a = arr[i] / 1000
+          let b = arr[i + 1] / 1000
+          let c = arr[i + 2] / 1000
+          let d = ((a + b + c) / 3).toFixed(3)
+          $('#tbody2').append(`
+            <tr>
+              <td>${a}</td>
+              <td>${b}</td>
+              <td>${c}</td>
+              <td>${d}</td>
+            </tr>
+          `)
+        }
+      })
+    </script>
+  </body>
+</html>
