@@ -1,860 +1,110 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
-    <title>XB-Demand</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新页面</title>
     <style>
-      input {
-        width: 45px;
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+      }
+      html,
+      body {
+        background-color: #ededed;
+        font-family: sans-serif;
+      }
+      .container {
+        width: 100%;
+        padding-top: 160px;
         text-align: center;
       }
+      h4 {
+        margin: 30px;
+      }
+      p {
+        font-size: 12px;
+        margin: 10px;
+      }
+      button {
+        width: 400px;
+        height: 40px;
+        background-color: #5b86b3;
+        color: #fff;
+        line-height: 40px;
+        margin: 20px;
+        padding: 0 10px;
+        border: 0;
+        outline: 0;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .link {
+        margin-top: 60px;
+      }
     </style>
-    <link rel="shortcut icon" href="./icon/fluidicon.png" />
-    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.css" />
-    <script src="./bootstrap-3.4.1-dist/js/jquery.js"></script>
-    <script src="./bootstrap-3.4.1-dist/js/bootstrap.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- https://hsdyz123.github.io/work/ -->
-          <a class="navbar-brand" href="javascript:;">XB-Demand</a>
-        </div>
+    <div class="container">
+      <!-- 文字 -->
+      <h4>警告 / Warning</h4>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#top">人名<span class="sr-only">(current)</span></a>
-            </li>
-            <li><a href="#wendu">时间 / 温度</a></li>
-            <li class="dropdown">
-              <a
-                href="#"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >物理因素<span class="caret"></span
-              ></a>
-              <ul class="dropdown-menu">
-                <li><a href="#zaosheng">噪声</a></li>
-                <li><a href="#gaowen">高温</a></li>
-                <li><a href="#gongpin">工频</a></li>
-                <li><a href="#zhaodu">照度</a></li>
-                <li><a href="#ziwai">紫外</a></li>
-                <li><a href="#shouchuan">手传</a></li>
-              </ul>
-            </li>
-            <li><a href="./html/yiqi.html" target="_blank">仪器</a></li>
-            <li><a href="./html/biaozhun.html" target="_blank">标准</a></li>
-            <li><a href="./report/index.html" target="_blank">报告</a></li>
-          </ul>
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                id="ipt_search"
-                placeholder="夸克搜索"
-                autocomplete="off"
-              />
-            </div>
-            <button type="button" class="btn btn-primary" id="btn_search">
-              搜索
-            </button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <!-- <li><a href="https://v3.bootcss.com/" target="_blank">Bootstrap v3 中文文档</a></li> -->
-            <!-- <li><a href="https://github.com/" target="_blank">GitHub</a></li> -->
-            <li><a href="./work.zip">下载源文件</a></li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
-    </nav>
-    <div class="container" style="margin-top: 64px">
-      <!-- 大屏 -->
-      <!-- <div class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>...</p>
+      <p>* 若阁下未满18岁，那也无所谓</p>
+      <p>* It doesn't matter if you are under 18.</p>
+      <!-- 按键 -->
+      <button>已满18+，点此进入</button>
+
+      <!-- js放进文字处 -->
+      <p id="aaa"></p>
+      <p><b>**这个网页会在6月份关闭**</b></p>
+      <!-- 下方链接 -->
+      <div class="link">
         <p>
-          <a
-            class="btn btn-primary btn-lg"
-            href="javascript:alert(6)"
-            role="button"
-            >Learn more</a
+          <a href="https://www.yikm.net/" style="color: #ff0000">
+            【玩游戏】小霸王，其乐无穷 。红白机，FC在线游戏，街机游戏，NES
+            games</a
           >
         </p>
-      </div> -->
-      <!-- 提示 -->
-      <div class="alert alert-danger" role="alert">
-        <span class="glyphicon glyphicon-info-sign"></span>
-        以下内容仅供参考！
-        <div
-          class="btn-group btn-group-sm"
-          role="group"
-          aria-label="..."
-          style="float: right; margin-top: -5px"
-        >
-          <button
-            type="button"
-            class="btn btn-danger"
-            id="btn_fanhui"
-            style="outline: 0"
+        <p>
+          <a href="https://www.huya.com/" style="color: #ff00cc"
+            >【看直播】虎牙直播-技术驱动娱乐-弹幕式互动直播平台➡️➡️➡️</a
           >
-            回到旧版
-          </button>
-        </div>
-      </div>
-      <!-- 因素表格 -->
-      <div
-        class="btn-group btn-group-md"
-        role="group"
-        aria-label="..."
-        style="width: 100%; margin-bottom: 20px"
-      >
-        <button
-          type="button"
-          class="btn btn-info"
-          id="btn_online"
-          style="width: 33.333%; outline: 0"
-        >
-          危害因素表格
-        </button>
-        <button
-          type="button"
-          class="btn btn-info"
-          id="btn_downloadXLSX"
-          style="width: 33.333%; outline: 0"
-        >
-          下载表格.xlsx
-        </button>
-        <button
-          type="button"
-          class="btn btn-info"
-          id="btn_downloadPDF"
-          style="width: 33.333%; outline: 0"
-        >
-          下载表格.pdf
-        </button>
-      </div>
-      <!-- 名字 -->
-      <div class="panel panel-default" id="name">
-        <div class="panel-heading">
-          <h3 class="panel-title">自定义名字</h3>
-          <div
-            class="btn-group btn-group-sm"
-            role="group"
-            aria-label="..."
-            style="float: right; margin-top: -24px"
+        </p>
+        <p>
+          <a href="https://www.douyu.com/" style="color: #039e76"
+            >【看直播】斗鱼 - 每个人的直播平台➡️➡️➡️</a
           >
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="btn_nan"
-              style="outline: 0"
-            >
-              刷新男名
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="btn_nv"
-              style="outline: 0"
-            >
-              刷新女名
-            </button>
-          </div>
-        </div>
-        <div class="panel-body" id="name_body"></div>
-      </div>
-      <!-- 时间/温度 -->
-      <div class="panel panel-default" id="wendu">
-        <div class="panel-heading">
-          <h3 class="panel-title">时间 / 温度</h3>
-        </div>
-        <div class="panel-body">
-          <p class="bg-primary" style="padding: 10px; border-radius: 3px">
-            注：最低温度不能在 5℃ 以下。
-          </p>
-          <table class="table table-striped table-bordered text-center">
-            <thead>
-              <tr>
-                <th class="text-center">时间</th>
-                <th class="text-center">温度</th>
-                <th class="text-center">湿度</th>
-                <th class="text-center">时间</th>
-                <th class="text-center">温度</th>
-                <th class="text-center">湿度</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>8:00</td>
-                <td>
-                  <input type="text" id="ipt_wendu" value="16.0" />
-                </td>
-                <td id="sd1"></td>
-                <td>14:00</td>
-                <td id="x1"></td>
-                <td id="sd21"></td>
-              </tr>
-              <tr>
-                <td>8:30</td>
-                <td id="s2"></td>
-                <td id="sd2"></td>
-                <td>14:30</td>
-                <td id="x2"></td>
-                <td id="sd22"></td>
-              </tr>
-              <tr>
-                <td>9:00</td>
-                <td id="s3"></td>
-                <td id="sd3"></td>
-                <td>15:00</td>
-                <td id="x3"></td>
-                <td id="sd23"></td>
-              </tr>
-              <tr>
-                <td>9:30</td>
-                <td id="s4"></td>
-                <td id="sd4"></td>
-                <td>15:30</td>
-                <td id="x4"></td>
-                <td id="sd24"></td>
-              </tr>
-              <tr>
-                <td>10:00</td>
-                <td id="s5"></td>
-                <td id="sd5"></td>
-                <td>16:00</td>
-                <td id="x5"></td>
-                <td id="sd25"></td>
-              </tr>
-              <tr>
-                <td>10:30</td>
-                <td id="s6"></td>
-                <td id="sd6"></td>
-                <td>16:30</td>
-                <td id="x6"></td>
-                <td id="sd26"></td>
-              </tr>
-              <tr>
-                <td>11:00</td>
-                <td id="s7"></td>
-                <td id="sd7"></td>
-                <td>17:00</td>
-                <td id="x7"></td>
-                <td id="sd27"></td>
-              </tr>
-              <tr>
-                <td>11:30</td>
-                <td id="s8"></td>
-                <td id="sd8"></td>
-                <td>17:30</td>
-                <td id="x8"></td>
-                <td id="sd28"></td>
-              </tr>
-              <tr>
-                <td>12:00</td>
-                <td id="s9"></td>
-                <td id="sd9"></td>
-                <td>18:00</td>
-                <td id="x9"></td>
-                <td id="sd29"></td>
-              </tr>
-              <tr>
-                <td>12:30</td>
-                <td id="s10"></td>
-                <td id="sd10"></td>
-                <td>18:30</td>
-                <td id="x10"></td>
-                <td id="sd30"></td>
-              </tr>
-              <tr>
-                <td>13:00</td>
-                <td id="s11"></td>
-                <td id="sd11"></td>
-                <td>19:00</td>
-                <td id="x11"></td>
-                <td id="sd31"></td>
-              </tr>
-              <tr>
-                <td>13:30</td>
-                <td id="s12"></td>
-                <td id="sd12"></td>
-                <td>19:30</td>
-                <td id="x12"></td>
-                <td id="sd32"></td>
-              </tr>
-              <tr>
-                <td>14:00</td>
-                <td id="s13"></td>
-                <td id="sd13"></td>
-                <td>20:00</td>
-                <td id="x13"></td>
-                <td id="sd33"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <!-- 噪声 -->
-      <div class="panel panel-default" id="zaosheng">
-        <div class="panel-heading">
-          <h3 class="panel-title">噪声</h3>
-        </div>
-        <div class="panel-body">
-          <p class="bg-primary" style="padding: 10px; border-radius: 3px">
-            注：三个随机数值是前面填的数±1
-          </p>
-          <table class="table table-striped table-bordered text-center">
-            <tr>
-              <th class="text-center">序号</th>
-              <th class="text-center">噪声数值</th>
-              <th class="text-center">噪声1</th>
-              <th class="text-center">噪声2</th>
-              <th class="text-center">噪声3</th>
-              <th class="text-center">平均噪声</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>
-                <input type="text" id="ipt_zaosheng1" value="80" />
-              </td>
-              <td id="zs11"></td>
-              <td id="zs12"></td>
-              <td id="zs13"></td>
-              <td id="zs14"></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>
-                <input type="text" id="ipt_zaosheng2" value="81" />
-              </td>
-              <td id="zs21"></td>
-              <td id="zs22"></td>
-              <td id="zs23"></td>
-              <td id="zs24"></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>
-                <input type="text" id="ipt_zaosheng3" value="82" />
-              </td>
-              <td id="zs31"></td>
-              <td id="zs32"></td>
-              <td id="zs33"></td>
-              <td id="zs34"></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>
-                <input type="text" id="ipt_zaosheng4" value="83" />
-              </td>
-              <td id="zs41"></td>
-              <td id="zs42"></td>
-              <td id="zs43"></td>
-              <td id="zs44"></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>
-                <input type="text" id="ipt_zaosheng5" value="84" />
-              </td>
-              <td id="zs51"></td>
-              <td id="zs52"></td>
-              <td id="zs53"></td>
-              <td id="zs54"></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>
-                <input type="text" id="ipt_zaosheng6" value="85" />
-              </td>
-              <td id="zs61"></td>
-              <td id="zs62"></td>
-              <td id="zs63"></td>
-              <td id="zs64"></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>
-                <input type="text" id="ipt_zaosheng7" value="86" />
-              </td>
-              <td id="zs71"></td>
-              <td id="zs72"></td>
-              <td id="zs73"></td>
-              <td id="zs74"></td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>
-                <input type="text" id="ipt_zaosheng8" value="87" />
-              </td>
-              <td id="zs81"></td>
-              <td id="zs82"></td>
-              <td id="zs83"></td>
-              <td id="zs84"></td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>
-                <input type="text" id="ipt_zaosheng9" value="88" />
-              </td>
-              <td id="zs91"></td>
-              <td id="zs92"></td>
-              <td id="zs93"></td>
-              <td id="zs94"></td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>
-                <input type="text" id="ipt_zaosheng10" value="89" />
-              </td>
-              <td id="zs101"></td>
-              <td id="zs102"></td>
-              <td id="zs103"></td>
-              <td id="zs104"></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <!-- 高温 -->
-      <div class="panel panel-default" id="gaowen">
-        <div class="panel-heading">
-          <h3 class="panel-title">高温</h3>
-          <div
-            class="btn-group btn-group-sm"
-            role="group"
-            aria-label="..."
-            style="float: right; margin-top: -24px"
+        </p>
+        <p>
+          <a href="https://www.douyin.com/" style="color: #ff0000"
+            >【刷视频】抖音，记录美好生活➡️➡️➡️</a
           >
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="btn_gaowen"
-              style="outline: 0"
-            >
-              刷新数值
-            </button>
-          </div>
-        </div>
-        <div class="panel-body">
-          <p class="bg-primary" style="padding: 10px; border-radius: 3px">
-            注：平均高温会在 21.5℃ ~ 22.5℃。
-          </p>
-          <table class="table table-striped table-bordered text-center">
-            <tr>
-              <th class="text-center">高温数据</th>
-              <th class="text-center">平均高温数据</th>
-            </tr>
-            <tr>
-              <td>
-                高温1：<input type="text" id="ipt_gaowen1" value="21.7" />
-              </td>
-              <td id="jieguo_gaowen" rowspan="3" style="line-height: 8"></td>
-            </tr>
-            <tr>
-              <td>
-                高温2：<input type="text" id="ipt_gaowen2" value="22.4" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                高温3：<input type="text" id="ipt_gaowen3" value="21.8" />
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <!-- 工频 -->
-      <div class="panel panel-default" id="gongpin">
-        <div class="panel-heading">
-          <h3 class="panel-title">工频</h3>
-        </div>
-        <div class="panel-body">
-          <p class="bg-primary" style="padding: 10px; border-radius: 3px">
-            注：工频的随机数值全部在0.010范围内
-          </p>
-          <table class="table table-striped table-bordered text-center">
-            <tr>
-              <th class="text-center">序号</th>
-              <th class="text-center">输入工频</th>
-              <th class="text-center">工频1</th>
-              <th class="text-center">工频2</th>
-              <th class="text-center">工频3</th>
-              <th class="text-center">平均工频</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>
-                <input type="text" id="ipt_gongpin1" value="0.015" />
-              </td>
-              <td id="gp11"></td>
-              <td id="gp12"></td>
-              <td id="gp13"></td>
-              <td id="gp14"></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>
-                <input type="text" id="ipt_gongpin2" value="0.015" />
-              </td>
-              <td id="gp21"></td>
-              <td id="gp22"></td>
-              <td id="gp23"></td>
-              <td id="gp24"></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>
-                <input type="text" id="ipt_gongpin3" value="0.015" />
-              </td>
-              <td id="gp31"></td>
-              <td id="gp32"></td>
-              <td id="gp33"></td>
-              <td id="gp34"></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>
-                <input type="text" id="ipt_gongpin4" value="0.015" />
-              </td>
-              <td id="gp41"></td>
-              <td id="gp42"></td>
-              <td id="gp43"></td>
-              <td id="gp44"></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>
-                <input type="text" id="ipt_gongpin5" value="0.015" />
-              </td>
-              <td id="gp51"></td>
-              <td id="gp52"></td>
-              <td id="gp53"></td>
-              <td id="gp54"></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>
-                <input type="text" id="ipt_gongpin6" value="0.015" />
-              </td>
-              <td id="gp61"></td>
-              <td id="gp62"></td>
-              <td id="gp63"></td>
-              <td id="gp64"></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>
-                <input type="text" id="ipt_gongpin7" value="0.015" />
-              </td>
-              <td id="gp71"></td>
-              <td id="gp72"></td>
-              <td id="gp73"></td>
-              <td id="gp74"></td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>
-                <input type="text" id="ipt_gongpin8" value="0.015" />
-              </td>
-              <td id="gp81"></td>
-              <td id="gp82"></td>
-              <td id="gp83"></td>
-              <td id="gp84"></td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>
-                <input type="text" id="ipt_gongpin9" value="0.015" />
-              </td>
-              <td id="gp91"></td>
-              <td id="gp92"></td>
-              <td id="gp93"></td>
-              <td id="gp94"></td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>
-                <input type="text" id="ipt_gongpin10" value="0.015" />
-              </td>
-              <td id="gp101"></td>
-              <td id="gp102"></td>
-              <td id="gp103"></td>
-              <td id="gp104"></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <!-- 照度 -->
-      <div class="panel panel-default" id="zhaodu">
-        <div class="panel-heading">
-          <h3 class="panel-title">照度</h3>
-        </div>
-        <div class="panel-body">
-          <p class="bg-primary" style="padding: 10px; border-radius: 3px">
-            注：填入的数为 <i>最小值</i> ，四个随机数值是前面填的数+16范围内的数
-          </p>
-          <table class="table table-striped table-bordered text-center">
-            <tr>
-              <th class="text-center">序号</th>
-              <th class="text-center">输入的照度数值</th>
-              <th class="text-center">照度1</th>
-              <th class="text-center">照度2</th>
-              <th class="text-center">照度3</th>
-              <th class="text-center">照度4</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>
-                <input type="text" id="ipt_zhaodu1" value="300" />
-              </td>
-              <td id="zd11"></td>
-              <td id="zd12"></td>
-              <td id="zd13"></td>
-              <td id="zd14"></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>
-                <input type="text" id="ipt_zhaodu2" value="310" />
-              </td>
-              <td id="zd21"></td>
-              <td id="zd22"></td>
-              <td id="zd23"></td>
-              <td id="zd24"></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>
-                <input type="text" id="ipt_zhaodu3" value="320" />
-              </td>
-              <td id="zd31"></td>
-              <td id="zd32"></td>
-              <td id="zd33"></td>
-              <td id="zd34"></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>
-                <input type="text" id="ipt_zhaodu4" value="330" />
-              </td>
-              <td id="zd41"></td>
-              <td id="zd42"></td>
-              <td id="zd43"></td>
-              <td id="zd44"></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>
-                <input type="text" id="ipt_zhaodu5" value="340" />
-              </td>
-              <td id="zd51"></td>
-              <td id="zd52"></td>
-              <td id="zd53"></td>
-              <td id="zd54"></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>
-                <input type="text" id="ipt_zhaodu6" value="350" />
-              </td>
-              <td id="zd61"></td>
-              <td id="zd62"></td>
-              <td id="zd63"></td>
-              <td id="zd64"></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>
-                <input type="text" id="ipt_zhaodu7" value="360" />
-              </td>
-              <td id="zd71"></td>
-              <td id="zd72"></td>
-              <td id="zd73"></td>
-              <td id="zd74"></td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>
-                <input type="text" id="ipt_zhaodu8" value="370" />
-              </td>
-              <td id="zd81"></td>
-              <td id="zd82"></td>
-              <td id="zd83"></td>
-              <td id="zd84"></td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>
-                <input type="text" id="ipt_zhaodu9" value="380" />
-              </td>
-              <td id="zd91"></td>
-              <td id="zd92"></td>
-              <td id="zd93"></td>
-              <td id="zd94"></td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>
-                <input type="text" id="ipt_zhaodu10" value="390" />
-              </td>
-              <td id="zd101"></td>
-              <td id="zd102"></td>
-              <td id="zd103"></td>
-              <td id="zd104"></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <!-- 紫外 -->
-      <div class="panel panel-default" id="ziwai">
-        <div class="panel-heading">
-          <h3 class="panel-title">紫外</h3>
-          <div
-            class="btn-group btn-group-sm"
-            role="group"
-            aria-label="..."
-            style="float: right; margin-top: -24px"
-          >
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="btn_ziwai"
-              style="outline: 0"
-            >
-              刷新数值
-            </button>
-          </div>
-        </div>
-        <div class="panel-body">
-          <p class="bg-primary" style="padding: 10px; border-radius: 3px">
-            注：紫外辐射的公式 E<sub>eff</sub>
-            =0.00011*E<sub>A</sub>+0.64*E<sub>B</sub>+0.5*E<sub></sub>
-          </p>
-          <table class="table table-striped table-bordered text-center">
-            <tr>
-              <th class="text-center">三个紫外数据</th>
-              <th class="text-center">折合紫外数据</th>
-            </tr>
-            <tr>
-              <td>紫外1：<input type="text" id="ipt_ziwai1" value="0.16" /></td>
-              <td id="jieguo_ziwai" rowspan="3" style="line-height: 8"></td>
-            </tr>
-            <tr>
-              <td>紫外2：<input type="text" id="ipt_ziwai2" value="0.15" /></td>
-            </tr>
-            <tr>
-              <td>紫外3：<input type="text" id="ipt_ziwai3" value="0.17" /></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <!-- 手传 -->
-      <div class="panel panel-default" id="shouchuan">
-        <div class="panel-heading">
-          <h3 class="panel-title">手传</h3>
-          <div
-            class="btn-group btn-group-sm"
-            role="group"
-            aria-label="..."
-            style="float: right; margin-top: -24px"
-          >
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="btn_shouchuan_2h"
-              style="outline: 0"
-            >
-              2h
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="btn_shouchuan_4h"
-              style="outline: 0"
-            >
-              4h
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="btn_shouchuan_6h"
-              style="outline: 0"
-            >
-              6h
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="btn_shouchuan_8h"
-              style="outline: 0"
-            >
-              8h
-            </button>
-          </div>
-        </div>
-        <div class="panel-body">
-          <p class="bg-primary" style="padding: 10px; border-radius: 3px">
-            注：2h = max * √(1/2)，4h = max，6h = max * √(3/2)，8h = max * √(2)
-          </p>
-          <table class="table table-striped table-bordered text-center">
-            <tr>
-              <th class="text-center">手传A</th>
-              <th class="text-center">手传B</th>
-              <th class="text-center">手传C</th>
-              <th class="text-center">手传结果</th>
-            </tr>
-            <tr>
-              <td id="sc1">0</td>
-              <td id="sc2">0</td>
-              <td id="sc3">0</td>
-              <td id="sc4">0</td>
-            </tr>
-          </table>
-        </div>
+        </p>
       </div>
     </div>
 
-    <script src="./js/biaoge.js"></script>
-    <script src="./js/name.js"></script>
-    <script src="./js/wendu.js"></script>
-    <script src="./js/zaosheng.js"></script>
-    <script src="./js/gaowen.js"></script>
-    <script src="./js/gongpin.js"></script>
-    <script src="./js/zhaodu.js"></script>
-    <script src="./js/ziwai.js"></script>
-    <script src="./js/shouchuan.js"></script>
-    <script src="./js/search.js"></script>
     <script type="text/javascript">
-      $('#btn_fanhui').on('click', function () {
-        window.location.href = 'https://hsdyz123.github.io/my/work/work_v1/'
+      const btn = document.getElementsByTagName('button')[0]
+      const aaa = document.getElementById('aaa')
+      const url = 'https://hsdyz123.github.io/xb/'
+      // 按钮
+      btn.addEventListener('click', () => {
+        location.assign(url)
       })
+      // 放进文字
+      aaa.insertAdjacentHTML(
+        'beforeend',
+        `
+        请牢记本站最新网址
+          <b><a href="${url}">${url}</a></b>
+        `
+      )
     </script>
   </body>
 </html>
